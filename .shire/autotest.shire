@@ -27,7 +27,6 @@ ${context.imports}
 ${context.sourceCode}
 ```
 
-## if newFile
 #if($context.isNewFile)
 Should include package and imports. Start method test code with Markdown code block here:
 #else
