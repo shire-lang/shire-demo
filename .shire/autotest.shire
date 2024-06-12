@@ -4,9 +4,14 @@ description: "AutoTest"
 interaction: AppendCursor
 actionLocation: ContextMenu
 interaction: AppendCursor
+when: $fileName.contains(".java") && $filePath.contains("src/main/java")
+fileName-rules:
+  /.*Controller.java/: "When testing controller, you MUST use MockMvc and test API only."
+variables:
+  "frameworkContext": /.*/build\.gradle\.kts/ { grep("org.springframework.boot:spring-boot-starter-jdbc") | print("This project use Spring Framework")}
 ---
 
-Write unit test for following ${context.lang} code.
+Write unit test for following ${context.language} code.
 
 ${context.frameworkContext}
 
@@ -22,7 +27,7 @@ ${context.currentClass}
 ${context.extContext}
 Here is the source code to be tested:
 
-```$context.lang
+```${context.language}
 ${context.imports}
 ${context.sourceCode}
 ```
