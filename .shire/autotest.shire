@@ -25,21 +25,24 @@ Here is the relate code maybe you can use
 ${context.relatedClasses}
 #end
 
-#if($context.currentClass.length() > 0 )
+#if($context.currentClassName.length() > 0 )
 This is the class where the source code resides:
-${context.currentClass}
+${context.currentClassCode}
 #end
 
 ${context.extContext}
-Here is the source code to be tested:
 
-```${context.language}
+Here is the imports to help you understand:
+
 ${context.imports}
-${context.sourceCode}
+
+Here is the source code to be tested:
+```${context.language}
+${context.selection}
 ```
 
 #if($context.isNewFile)
 Should include package and imports. Start method test code with Markdown code block here:
 #else
-Should include package and imports. Start ${context.testClassName} test code with Markdown code block here:
+Should include package and imports. Start ${context.targetTestFileName} test code with Markdown code block here:
 #end
