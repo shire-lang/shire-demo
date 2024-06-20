@@ -7,7 +7,7 @@ when: $fileName.contains(".java") && $filePath.contains("src/main/java")
 fileName-rules:
   /.*Controller.java/: "When testing controller, you MUST use MockMvc and test API only."
 variables:
-  "extContext": /.*/build\.gradle\.kts/ { grep("org.springframework.boot:spring-boot-starter-jdbc") | print("This project use Spring Framework")}
+  "extContext": /build\.gradle\.kts/ { cat | grep("org.springframework.boot:spring-boot-starter-jdbc") | print("This project use Spring Framework")}
   "testTemplate": /\(.*\).java/ {
     case "$1" {
       "Controller" { cat(".shire/templates/ControllerTest.java") }
