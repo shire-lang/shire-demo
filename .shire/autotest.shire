@@ -15,6 +15,17 @@ variables:
       default  { cat(".shire/templates/DefaultTest.java") }
     }
   }
+  "allController": {
+    from {
+        PsiClass clazz /* sample */
+    }
+    where {
+        clazz.getExtendsList().getText().length() > 0
+    }
+    select {
+        clazz.getExtendsList().getText()
+    }
+  }
 ---
 Write unit test for following ${context.language} code.
 
@@ -46,3 +57,5 @@ Should include package and imports. Start method test code with Markdown code bl
 #else
 Should include package and imports. Start ${context.targetTestFileName} test code with Markdown code block here:
 #end
+
+$allController
