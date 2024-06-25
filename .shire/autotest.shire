@@ -20,10 +20,10 @@ variables:
         PsiClass clazz /* sample */
     }
     where {
-        clazz.getExtendsList().getText().length() > 0
+        clazz.getMethods().length() > 0
     }
     select {
-        clazz.getExtendsList().getText()
+        clazz.getMethods()
     }
   }
 ---

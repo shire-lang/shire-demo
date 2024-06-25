@@ -1,0 +1,30 @@
+---
+when: "xxx"
+afterStreaming: {
+    flags {
+      "variable-sucesss" { $selection.length > 1 }
+      "jsonpath-success" { jsonpath("$.phoneNumbers[:1].type") }
+      "fail" { $content.contains("error") && $content.regex("exception") }
+    }
+    case flags {
+      "variable-sucesss" { done }
+      "jsonpath-success" { task() }
+      "fail" { task() }
+    }
+  }
+onStreaming: {
+    /* functions */
+  }
+onStreamingEnd: ["VerifyCode", "RunCode"]
+---
+
+nextAction:
+
+- //bookstore/book[price>35]
+- $.phoneNumbers[:1].type
+- Regex
+
+onStreamingDone:
+
+- Array of processor
+- Object flow
