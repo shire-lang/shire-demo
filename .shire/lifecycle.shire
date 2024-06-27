@@ -9,7 +9,7 @@ variables:
     }
   }
 onStreaming: { /* functions */ }
-onStreamingEnd: { parseCode("json") | verifyCode("json") | runCode("json") }
+onStreamingEnd: { parseCode | saveFile | verifyCode | runCode }
 afterStreaming: {
     condition {
       "variable-sucesss" { $selection.length > 1 }
@@ -23,3 +23,5 @@ afterStreaming: {
     }
   }
 ---
+
+生成一个 java hello world，使用 markdown block  返回
