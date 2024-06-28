@@ -1,0 +1,19 @@
+---
+name: "sample"
+description: ""
+interaction: AppendCursor
+actionLocation: ContextMenu
+interaction: AppendCursor
+afterStreaming: {
+    condition {
+      "sucesss" { output.length > 1 }
+    }
+    case condition {
+      "sucesss" { execute("lifecycle-streaming-end.shire") }
+    }
+  }
+---
+
+[notes]: For more options, see [the docs](https://shire.phodal.com/)
+
+hi
