@@ -1,4 +1,6 @@
 ---
+name: "LifeCycle Streaming End"
+actionLocation: CommitMenu
 when: "xxx"
 variables:
   "testTemplate": /\(.*\).java/ {
