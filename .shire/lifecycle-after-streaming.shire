@@ -1,7 +1,6 @@
 ---
 name: "sample"
 description: ""
-interaction: AppendCursor
 actionLocation: ContextMenu
 interaction: AppendCursor
 afterStreaming: {
