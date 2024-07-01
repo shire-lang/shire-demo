@@ -1,5 +1,5 @@
 ---
-name: "sample"
+name: "After Streaming"
 description: ""
 actionLocation: ContextMenu
 interaction: AppendCursor
