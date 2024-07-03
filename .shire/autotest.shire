@@ -15,17 +15,6 @@ variables:
       default  { cat(".shire/templates/DefaultTest.java") }
     }
   }
-  "allController": {
-    from {
-        PsiClass clazz /* sample */
-    }
-    where {
-        clazz.getMethods().length() > 0
-    }
-    select {
-        clazz.getMethods()
-    }
-  }
 ---
 Write unit test for following ${context.language} code.
 
@@ -54,9 +43,7 @@ ${context.selection}
 ```
 
 #if($context.isNewFile)
-Should include package and imports. Start method test code with Markdown code block here:
+Start method test code with Markdown code block here:
 #else
-Should include package and imports. Start ${context.targetTestFileName} test code with Markdown code block here:
+Start ${context.targetTestFileName} test code with Markdown code block here:
 #end
-
-$allController
