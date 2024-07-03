@@ -15,6 +15,7 @@ variables:
       default  { cat(".shire/templates/DefaultTest.java") }
     }
   }
+onStreamingEnd: { parseCode | saveFile }
 ---
 Write unit test for following ${context.language} code.
 

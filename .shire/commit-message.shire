@@ -6,6 +6,4 @@ actionLocation: CommitMenu
 
 根据如下的代码变更生成提交信息：
 
-```
-$diff
-```
+$currentChanges
