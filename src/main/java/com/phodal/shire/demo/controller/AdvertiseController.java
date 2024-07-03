@@ -13,6 +13,10 @@ import java.util.List;
 @Controller
 @RequestMapping("/advertise")
 public class AdvertiseController {
+    /**
+     *
+     * @return
+     */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
     public CommonResult<List<Advertise>> list() {
