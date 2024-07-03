@@ -1,6 +1,5 @@
 ---
 name: "LifeCycle Streaming End"
-actionLocation: CommitMenu
 when: "xxx"
 variables:
   "testTemplate": /\(.*\).java/ {
@@ -15,5 +14,3 @@ onStreamingEnd: { parseCode | saveFile | openFile | verifyCode | runCode }
 ---
 
 生成一个 python hello world，使用 markdown block  返回
-
-$diff
