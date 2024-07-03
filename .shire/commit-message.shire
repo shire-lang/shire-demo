@@ -1,5 +1,6 @@
 ---
 name: "Commit message"
+interaction: AppendCursor
 actionLocation: CommitMenu
 ---
 
