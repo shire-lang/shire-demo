@@ -1,7 +1,7 @@
 ---
 name: "AutoTest"
 description: "AutoTest"
-interaction: AppendCursor
+interaction: RunPanel
 actionLocation: ContextMenu
 when: $fileName.contains(".java") && $filePath.contains("src/main/java")
 fileName-rules:
