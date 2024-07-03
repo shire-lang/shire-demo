@@ -20,6 +20,14 @@ interaction: ReplaceSelection
 请勿生成包含虚构周围类、方法的代码。不要模拟缺失的依赖项。
 提供的代码已经整合到正确且可编译的代码中，不要在其周围添加额外的类。
 
+以下是静态代码分析的 Code Smell
+
+```
+$codeSmell
+```
+
 重构以下代码：
 
+```$language
 $selection
+```
