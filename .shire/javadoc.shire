@@ -4,8 +4,10 @@ interaction: InsertBeforeSelection
 actionLocation: ContextMenu
 ---
 
-为如下的代码编写注释，使用  javadoc  风格：
+为如下的代码编写注释，使用 javadoc 风格：
 
 ```$language
 $selection
 ```
+
+只返回注释
