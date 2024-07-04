@@ -1,0 +1,12 @@
+---
+name: "Quick Input"
+interaction: InsertBeforeSelection
+actionLocation: InputBox
+onStreamingEnd: { insertNewline | formatCode }
+---
+
+根据用户的输入生成代码。如下是用户的输入：
+
+```
+$input
+```
