@@ -27,9 +27,9 @@ public class BlogController {
      * Create a new blog post by receiving a request with the blog post details
      *
      * @param request the request containing the details of the blog post to be created
- * @return the newly created blog post
- */
-@ApiOperation(value = "Create a new blog")
+     * @return the newly created blog post
+     */
+    @ApiOperation(value = "Create a new blog")
     @PostMapping("/")
     public BlogPost cftBlog(@RequestBody CreateBlogRequest request) {
         CreateBlogResponse response = new CreateBlogResponse();
