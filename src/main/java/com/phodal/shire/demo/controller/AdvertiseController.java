@@ -14,8 +14,9 @@ import java.util.List;
 @RequestMapping("/advertise")
 public class AdvertiseController {
     /**
+     * Get a list of advertisements.
      *
-     * @return
+     * @return CommonResult<List < Advertise>> A common result object containing a list of advertisements.
      */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody

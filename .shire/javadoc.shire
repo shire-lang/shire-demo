@@ -1,0 +1,11 @@
+---
+name: "生成注释"
+interaction: InsertBeforeSelection
+actionLocation: ContextMenu
+---
+
+为如下的代码编写注释，使用  javadoc  风格：
+
+```$language
+$selection
+```
