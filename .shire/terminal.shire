@@ -1,0 +1,10 @@
+---
+name: "Terminal"
+description: "Generate Cli"
+interaction: AppendCursor
+actionLocation: TerminalMenu
+---
+
+Based on User quetion to genearte shell:
+
+$input
