@@ -24,10 +24,10 @@ public class BlogController {
     }
 
     /**
-     * Create a new blog post by receiving a request with the blog post details
+     * Create a new blog post by receiving a request with blog post details.
      *
-     * @param request the request containing the details of the blog post to be created
-     * @return the newly created blog post
+     * @param request The request object containing the details of the blog post to be created
+     * @return The newly created blog post
      */
     @ApiOperation(value = "Create a new blog")
     @PostMapping("/")
