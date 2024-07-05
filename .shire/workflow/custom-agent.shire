@@ -1,6 +1,6 @@
 ---
 name: "Custom Agent"
-description: ""
+description: "内部 Agent 示例"
 actionLocation: ContextMenu
 interaction: AppendCursor
 afterStreaming: {
