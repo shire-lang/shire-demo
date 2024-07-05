@@ -2,6 +2,7 @@
 name: "生成注释"
 interaction: InsertBeforeSelection
 actionLocation: ContextMenu
+when: $fileName.contains(".java") && $filePath.contains("src/main/java")
 onStreamingEnd: { insertNewline | formatCode }
 ---
 

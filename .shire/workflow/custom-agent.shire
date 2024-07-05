@@ -1,5 +1,5 @@
 ---
-name: "After Streaming"
+name: "Custom Agent"
 description: ""
 actionLocation: ContextMenu
 interaction: AppendCursor
@@ -15,4 +15,5 @@ afterStreaming: {
 
 [notes]: For more options, see [the docs](https://shire.phodal.com/)
 
-hi
+@"内部 API 集成" 设计一个博客 API
+
