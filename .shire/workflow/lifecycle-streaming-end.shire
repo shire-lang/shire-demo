@@ -10,9 +10,9 @@ variables:
     }
   }
 onStreaming: { /* functions */ }
-onStreamingEnd: { parseCode | saveFile | openFile | verifyCode | runCode }
+onStreamingEnd: { parseCode | saveFile("api.py") | openFile | verifyCode | runCode }
 ---
 
-根据如下的信息，编写对应的 Python 代码:
+根据如下的信息，使用 Python + FastAPI 编写 HTTP 接口代码:
 
 $output
