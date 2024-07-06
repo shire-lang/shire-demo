@@ -17,7 +17,12 @@ public class BlogController {
         this.blogService = blogService;
     }
 
-    @ApiOperation(value = "Get Blog by id")
+    /**
+     * Get Blog by id
+     *
+     * @param id The id of the blog post to retrieve
+     * @return The blog post with the specified id
+     */
     @GetMapping("/{id}")
     public BlogPost getBlog(@PathVariable Long id) {
         return blogService.getBlogPostById(id);

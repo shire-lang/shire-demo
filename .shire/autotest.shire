@@ -1,5 +1,5 @@
 ---
-name: "AutoTest"
+name: "Auto Test"
 description: "AutoTest"
 interaction: RunPanel
 actionLocation: ContextMenu
