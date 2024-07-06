@@ -13,15 +13,20 @@ import java.util.List;
 @Controller
 @RequestMapping("/advertise")
 public class AdvertiseController {
+
     /**
      * Get a list of advertisements.
      *
-     * @return CommonResult<List < Advertise>> A common result object containing a list of advertisements.
+     * @return CommonResult object containing a list of Advertise objects
      */
     @RequestMapping(value = "/list", method = RequestMethod.GET)
     @ResponseBody
-    public CommonResult<List<Advertise>> list() {
-        List<Advertise> companyAddressList = new ArrayList<>();
+    public CommonResult<List<Advertise>> getList() {
+        List<Advertise> companyAddressList = createCompanyAddressList();
         return CommonResult.success(companyAddressList);
+    }
+
+    private List<Advertise> createCompanyAddressList() {
+        return new ArrayList<>();
     }
 }
