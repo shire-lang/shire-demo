@@ -5,7 +5,7 @@ interaction:  RunPanel
 variables:
   "contextVariable": /ContextVariable\.kt/ { cat }
   "psiContextVariable": /PsiContextVariable\.kt/ { cat }
-onStreamingEnd: { parseCode | saveFile("docs/api.md")  }
+onStreamingEnd: { saveFile("docs/api.md")  }
 ---
 
 根据如下的代码编写 API 文档：
