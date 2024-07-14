@@ -2,9 +2,6 @@
 name: "Context Variable"
 description: "Here is a description of the action."
 interaction:  RunPanel
-variables:
-  "contextVariable": /ContextVariable\.kt/ { cat }
-  "psiContextVariable": /PsiContextVariable\.kt/ { cat }
 onStreamingEnd: { saveFile("docs/api.md")  }
 ---
 

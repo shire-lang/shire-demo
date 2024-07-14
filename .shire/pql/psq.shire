@@ -1,0 +1,17 @@
+---
+variables:
+  "allController": {
+    from {
+        PsiClass clazz // the class
+    }
+    where {
+        clazz.annotatedOf("org.springframework.stereotype.Controller")
+    }
+
+    select {
+        clazz.id,  clazz.text, clazz.name, "code"
+    }
+  }
+---
+
+$allController

@@ -14,12 +14,13 @@ Get a specific blog post by its id.
 
 - **URL Params**
 
-  - `id` - The id of the blog post to retrieve
+  - **Required:**
+    `id=[long]`
 
 - **Success Response**
 
   - **Code:** 200
-  - **Content:** 
+    **Content:** 
     ```json
     {
         "id": 1,
@@ -42,17 +43,22 @@ Create a new blog post by providing the details in the request body.
 
 - **Data Params**
 
-  - `title` - The title of the blog post
-  - `content` - The content of the blog post
+  - **Request Body:**
+    ```json
+    {
+        "title": "New Blog Post",
+        "content": "This is the content of the new blog post."
+    }
+    ```
 
 - **Success Response**
 
   - **Code:** 200
-  - **Content:** 
+    **Content:** 
     ```json
     {
         "id": 2,
         "title": "New Blog Post",
-        "content": "This is a new blog post content."
+        "content": "This is the content of the new blog post."
     }
     ```
