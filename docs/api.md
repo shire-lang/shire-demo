@@ -1,64 +1,59 @@
+下面是根据提供的 Java Spring Controller 代码编写的 API 文档：
+
+---
+
 # Blog API
 
-## Get Blog by id
+## 概述
 
-Get a specific blog post by its id.
+本 API 提供了博客文章的获取和创建功能。
 
-- **URL**
+## 路径
 
-  `/blog/{id}`
+所有路径均以 `/blog` 为前缀。
 
-- **Method**
+### 获取博客文章
 
-  `GET`
+#### GET `/blog/{id}`
 
-- **URL Params**
+获取指定 ID 的博客文章。
 
-  - **Required:**
-    `id=[long]`
+#### 参数
 
-- **Success Response**
+- `id` (路径变量): 博客文章的唯一标识符（Long 类型）。
 
-  - **Code:** 200
-    **Content:** 
-    ```json
-    {
-        "id": 1,
-        "title": "Sample Blog Post",
-        "content": "This is a sample blog post content."
-    }
-    ```
+#### 返回
 
-## Create a new blog post
+- `200 OK`: 返回指定 ID 的博客文章。
+- `404 Not Found`: 如果没有找到指定 ID 的博客文章。
 
-Create a new blog post by providing the details in the request body.
+#### 返回类型
 
-- **URL**
+- `BlogPost`: 博客文章实体。
 
-  `/blog/`
+### 创建博客文章
 
-- **Method**
+#### POST `/blog/`
 
-  `POST`
+创建新的博客文章。
 
-- **Data Params**
+#### 参数
 
-  - **Request Body:**
-    ```json
-    {
-        "title": "New Blog Post",
-        "content": "This is the content of the new blog post."
-    }
-    ```
+- `CreateBlogRequest` (请求体): 包含要创建的博客文章详情的对象。
 
-- **Success Response**
+#### 返回
 
-  - **Code:** 200
-    **Content:** 
-    ```json
-    {
-        "id": 2,
-        "title": "New Blog Post",
-        "content": "This is the content of the new blog post."
-    }
-    ```
+- `201 Created`: 返回新创建的博客文章。
+- `400 Bad Request`: 如果请求信息不正确。
+
+#### 返回类型
+
+- `BlogPost`: 新创建的博客文章实体。
+
+#### 操作
+
+- `ApiOperation`: 标记为 "Create a new blog"，用于描述接口行为。
+
+---
+
+请注意，文档是基于代码中的注释和注解编写的，可能需要根据实际业务需求进行相应的调整。此外，在实际的 API 文档中，还应该包括对请求体和响应体的详细描述、错误代码定义以及示例等。

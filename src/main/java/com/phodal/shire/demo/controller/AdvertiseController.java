@@ -26,6 +26,11 @@ public class AdvertiseController {
         return CommonResult.success(companyAddressList);
     }
 
+    /**
+     * Creates a new list of Advertise objects representing company addresses.
+     *
+     * @return a new ArrayList of Advertise objects
+     */
     private List<Advertise> createCompanyAddressList() {
         return new ArrayList<>();
     }
