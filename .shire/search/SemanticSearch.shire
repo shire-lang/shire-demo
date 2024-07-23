@@ -1,10 +1,11 @@
 ---
-name: "Search"
+name: "Semantic Search"
 variables:
   "testTemplate": /.*.kt/ { splitting | embedding | searching("hello") }
+  "lang": "java"
 afterStreaming: {
     case condition {
-      default { searching($output) | execute("search.shire") }
+      default { searching($output) | execute("search.shire", $output, $input, $lang) }
     }
  }
 ---
