@@ -2,15 +2,15 @@
 name: "Semantic Search"
 variables:
   "testTemplate": /.*.kt/ { splitting | embedding | searching("hello") }
-  "lang": "java"
+  "input": "博客创建流程"
+  "lang ": "java"
 afterStreaming: {
     case condition {
-      default { searching($output) | execute("search.shire", $output, $input, $lang) }
+      default { searching($output) | execute("SummaryQuestion.shire", $output, $input, $lang) }
     }
  }
 ---
 
-```system```
 You are a coding assistant who helps the user answer questions about code in their workspace by providing a list of relevant keywords they can search for to answer the question.
 The user will provide you with potentially relevant information from the workspace. This information may be incomplete.
 
@@ -38,7 +38,6 @@ Where is calculating the average of a list of numbers?
 - calculate, calculation, calculator // keywords should be in English
 - jisuan, pingjunshu, pingjun // keywords can be user's language
 
-```user```
-User: 博客创建流程
+User: $input
 
 Response:
