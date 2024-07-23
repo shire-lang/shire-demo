@@ -2,7 +2,11 @@
 name: "Search"
 variables:
   "testTemplate": /.*.kt/ { caching("disk") | splitting | embedding }
-afterStreaming: { searching($output) | execute("search.shire") }
+afterStreaming: {
+    case condition {
+      default { searching($output) | execute("search.shire") }
+    }
+ }
 ---
 
 ```system```
