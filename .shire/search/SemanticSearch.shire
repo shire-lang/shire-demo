@@ -1,7 +1,7 @@
 ---
 name: "Semantic Search"
 variables:
-  "testTemplate": /.*.kt/ { splitting | embedding | searching("hello") }
+  "init": /.*.java/ { splitting | embedding }
   "input": "博客创建流程"
   "lang": "java"
 afterStreaming: {
@@ -32,11 +32,7 @@ Think step by step:
 User: Where is the code for the function that calculates the average of a list of numbers?
 
 Response:
-Where is calculating the average of a list of numbers?
-
 - calculate average, average, average calculation // keywords should be in English
-- calculate, calculation, calculator // keywords should be in English
-- jisuan, pingjunshu, pingjun // keywords can be user's language
 
 User: $input
 
