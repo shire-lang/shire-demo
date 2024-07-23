@@ -3,7 +3,7 @@ name: "Semantic Search"
 variables:
   "testTemplate": /.*.kt/ { splitting | embedding | searching("hello") }
   "input": "博客创建流程"
-  "lang ": "java"
+  "lang": "java"
 afterStreaming: {
     case condition {
       default { searching($output) | execute("SummaryQuestion.shire", $output, $input, $lang) }
