@@ -32,8 +32,9 @@ Think step by step:
 User: Where is the code for the function that calculates the average of a list of numbers?
 
 Response:
-- calculate average, average, average calculation // keywords should be in English
+- calculate average, average
 
 User: $input
 
 Response:
+-
