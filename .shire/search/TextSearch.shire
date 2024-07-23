@@ -1,7 +1,7 @@
 ---
 name: "Search"
 variables:
-  "testTemplate": /.*.kt/ { caching("disk") | splitting | embedding }
+  "testTemplate": /.*.kt/ { splitting | embedding | searching("hello") }
 afterStreaming: {
     case condition {
       default { searching($output) | execute("search.shire") }
