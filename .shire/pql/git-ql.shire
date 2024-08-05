@@ -1,6 +1,6 @@
 ---
 variables:
-  "changes": {
+  "phodalCommits": {
     from {
         GitCommit commit, Date date
     }
@@ -15,4 +15,5 @@ variables:
 
 总结这个人的提交
 
-$changes
+$phodalCommits
+
