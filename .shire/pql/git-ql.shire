@@ -2,10 +2,10 @@
 variables:
   "phodalCommits": {
     from {
-        GitCommit commit
+        GitCommit commit, Date date
     }
     where {
-        commit.authorName == "Phodal Huang"
+        commit.authorName == "Phodal Huang" and commit.authorDate <= date("now")
     }
     select {
         commit.authorName, commit.authorEmail, commit.message
