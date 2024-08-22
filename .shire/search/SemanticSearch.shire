@@ -1,12 +1,12 @@
 ---
 name: "Semantic Search"
 variables:
-  "init": /.*.java/ { splitting | embedding }
+  "init": /.*.java/ { splitting | embedding("disk") }
   "input": "博客创建流程"
   "lang": "java"
 afterStreaming: {
     case condition {
-      default { searching($output) | execute("SummaryQuestion.shire", $output, $input, $lang) }
+      default { searching($output) | reranking("default") | execute("SummaryQuestion.shire", $output, $input, $lang) }
     }
  }
 ---

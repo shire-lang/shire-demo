@@ -1,0 +1,9 @@
+---
+name: "SonarFix"
+description: "Here is a description of the action."
+interaction: RunPanel
+actionLocation: IntentionMenu
+---
+
+修复如下的 Sonar 问题：
+$sonarResults
