@@ -1,0 +1,9 @@
+---
+variables:
+  "init": /sampl.sh/ { thread(".shire/toolchain/bigmodel.curl.sh") }
+---
+
+hi
+
+$init
+
