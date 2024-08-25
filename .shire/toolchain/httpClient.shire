@@ -1,9 +1,9 @@
 ---
 variables:
-  "init": /sampl.sh/ { thread(".shire/toolchain/bigmodel.curl.sh") }
+  "api": /sampl.sh/ { thread(".shire/toolchain/bigmodel.curl.sh") | jsonpath("$.choices[0].message.content") }
 ---
 
 hi
 
-$init
+$api
 
