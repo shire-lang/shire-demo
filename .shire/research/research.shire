@@ -1,6 +1,6 @@
 ---
 variables:
-  "crawl": /*\.md/ { capture("docs/crawlSample.md", "link") | crawl() | thread(".shire/research/summary.shire") }
+  "crawl": /crawlSample\.md/ { capture("docs/crawlSample.md", "link") | crawl() | thread(".shire/research/summary.shire") }
   "article": /crawlSample\.md/ { cat }
 ---
 

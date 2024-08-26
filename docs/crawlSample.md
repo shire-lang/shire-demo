@@ -6,32 +6,14 @@
 
 ## 行业示例
 
-### AutoDev 示例
-
-如下是 AutoDev，Shire 的 prompt 示例：
-
-```shire
----
-name: "Terminal"
-description: "Generate Cli"
-interaction: AppendCursor
-actionLocation: TerminalMenu
----
-
-Return only the command to be executed as a raw string, no string delimiters
-wrapping it, no yapping, no markdown, no fenced code blocks, what you return
-will be passed to subprocess.check_output() directly.
-
-- Today is: $today, user system is: $os,
-- User current directory is: $cwd, user use is: $shellPath, according the tool to create the command.
-
-For example, if the user asks: undo last git commit
-
-You return only line command: git reset --soft HEAD~1
-
-User asks: $input
-```
-
-### Codeium Termium
-
-https://codeium.com/blog/termium-codeium-in-terminal-launch
+1. [aichat](https://terminaltrove.com/aichat/) - <small>all-in-one AI powered CLI chat and copilot.</small>
+2. [aider](https://terminaltrove.com/aider/) - <small>AI pair programming in your terminal</small>
+3. [elia](https://terminaltrove.com/elia/) - <small>A TUI ChatGPT client built with Textual</small>
+4. [gpterminator](https://terminaltrove.com/gpterminator/) - <small>A TUI for OpenAI's ChatGPT</small>
+5. [gtt](https://terminaltrove.com/gtt/) - <small>A TUI for Google Translate, ChatGPT, DeepL and other AI services.</small>
+6. [nvitop](https://terminaltrove.com/nvitop/) - <small>An interactive NVIDIA-GPU process viewer and beyond.</small>
+7. [nvtop](https://terminaltrove.com/nvtop/) - <small>NVIDIA GPUs htop like monitoring tool</small>
+8. [ollama](https://terminaltrove.com/ollama/) - <small>get up and running with large language models locally.</small>
+9. [oterm](https://terminaltrove.com/oterm/) - <small>A text-based terminal client for ollama.</small>
+10. [tgpt](https://terminaltrove.com/tgpt/) - <small>AI Chatbots in the terminal without needing API keys.</small>
+11. [yai](https://terminaltrove.com/yai/) - <small>Your AI powered terminal assistant</small>
