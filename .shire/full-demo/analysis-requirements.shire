@@ -1,17 +1,27 @@
 ---
-name: "分析用户故事"
+name: "寻找代码变更点"
 variables:
-  "story": /*/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
-  "controllers": /.*.java/ { cat | grep("Controller {")  }
+  "controllers": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Controller)")  }
+onStreamingEnd: { parseCode | openFile($output) | exectute("generate-test.shire") }
 ---
+
+["story": /*/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }]
 
 根据如下的用户故事：
 
-$story
+创建博客
 
 以及对应的 controller 名称，选择最合适修改的 controller
 
 $controllers
 
-如果没有合适的 controller，请给出最合适的 controller 名字
+如果没有合适的 controller，请给出最合适的 controller 名字，
+
+你只返回文件名，诸如：
+
+```
+DemoController.java
+```
+
+请严格按格式返回
 
