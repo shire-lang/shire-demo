@@ -1,10 +1,14 @@
 ---
 name: "寻找代码变更点"
 variables:
-  "story": /no/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
+  "story": /any/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
   "controllers": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Controller)")  }
   "firstController": /BlogController\.java/ { print }
-onStreamingEnd: { parseCode | openFile($output) | exectute("generate-test.shire") }
+afterStreaming: {
+  case condition {
+    default { execute("modify-code.shire", $story, $output) }
+  }
+}
 ---
 
 根据如下的用户故事：

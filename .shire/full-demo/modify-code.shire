@@ -1,0 +1,18 @@
+---
+name: "代码修改"
+variables:
+  "controllerCode": /any/ { cat($output) }
+onStreamingEnd: { parseCode | saveFile($output) }
+---
+
+根据如下的需求，对原文件的代码进行修改。
+
+需求：
+
+$story
+
+原始代码：
+
+$output
+
+请使用 Markdown Block 返回变更后的代码，只返回代码。
