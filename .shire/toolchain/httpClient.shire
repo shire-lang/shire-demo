@@ -1,6 +1,6 @@
 ---
 variables:
-  "api": /sampl.sh/ { thread(".shire/toolchain/bigmodel.curl.sh") | jsonpath("$.choices[0].message.content") }
+  "api": /sampl.sh/ { thread(".shire/shell/bigmodel.curl.sh") | jsonpath("$.choices[0].message.content") }
 ---
 
 hi

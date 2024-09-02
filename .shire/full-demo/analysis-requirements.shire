@@ -1,0 +1,17 @@
+---
+name: "分析用户故事"
+variables:
+  "story": /*/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
+  "controllers": /.*.java/ { cat | grep("Controller {")  }
+---
+
+根据如下的用户故事：
+
+$story
+
+以及对应的 controller 名称，选择最合适修改的 controller
+
+$controllers
+
+如果没有合适的 controller，请给出最合适的 controller 代码
+
