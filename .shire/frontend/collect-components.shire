@@ -1,0 +1,8 @@
+---
+name: "前端页面生成"
+description: "Here is a description of the action."
+variables:
+  "components": /.*.tsx/ { grep("([A-Z][a-zA-Z]+).tsx") }
+---
+
+$components
