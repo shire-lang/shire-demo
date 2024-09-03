@@ -19,15 +19,11 @@ $story
 
 $controllers
 
-如果没有合适的 controller，请给出最合适的 controller 路径。 Controller 的位置默认在：
+如果没有合适的 controller，请给出最合适的 controller 路径。 Controller 示例路径在：
 
 $firstController
 
-你只返回文件名，诸如：
-
-```
-src/main/xxx/DemoController.java
-```
+你只返回文件名，诸如：src/main/xxx/DemoController.java
 
 请严格按格式返回
 
