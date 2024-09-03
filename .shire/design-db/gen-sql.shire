@@ -1,0 +1,40 @@
+---
+name: "代码修改"
+onStreamingEnd: { parseCode | saveFile }
+---
+
+根据如下的需求，对原文件的代码进行修改。
+
+需求：
+
+$story
+
+表信息：
+
+$tableInfo
+
+要求如下：
+
+1.表名小写，并以 shire_ 开头，如：shire_message_template。
+2.字段名全大写，默认值为 NULL，每个字段需要有 COMMENT。
+3.尽可能考虑不同的场景，提供丰富的字段，以作为参考。
+4.贴近 Java 的编码习惯
+5.你返回的 SQL 类似于如下的格式：
+```sql
+CREATE TABLE `shire_message_template`(
+  `MESSAGE_TEMPLATE_ID` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增长ID',
+  `TEMPLATE_ID` varchar(32) NOT NULL COMMENT '短信模板id',
+  `TEMPLATE_NAME` varchar(255) NOT NULL COMMENT '短信模板名称',
+  `TEMPLATE_CONTENT` varchar(255) NOT NULL COMMENT '短信模板内容',
+  `TEMPLATE_DESC` varchar(255) NOT NULL COMMENT '短信模板说明',
+  `CREATE_USER` varchar(32) DEFAULT NULL COMMENT '创建人',
+  `CREATE_TIME` datetime DEFAULT NULL COMMENT '创建时间',
+  `UPDATE_USER` varchar(32) DEFAULT NULL COMMENT '修改用户',
+  `UPDATE_TIME` datetime DEFAULT NULL COMMENT '修改时间',
+  `IS_VALID` varchar(2) DEFAULT NULL COMMENT '是否有效 0-无效 1-有效',
+  `PK_SERIAL` varchar(32) DEFAULT NULL COMMENT '主键序列号',
+  PRIMARY KEY (`MESSAGE_TEMPLATE_ID`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin COMMENT='短信模板表';
+```
+
+请按照上述要求，生成符合需求的 SQL。

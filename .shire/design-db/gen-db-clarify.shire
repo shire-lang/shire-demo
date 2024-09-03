@@ -1,0 +1,29 @@
+---
+name: "设计数据库"
+variables:
+  "story": /any/ { thread(".shire/shell/github-issue.sh") | jsonpath("$.body") }
+afterStreaming: {
+  case condition {
+    default { execute("gen-sql.shire", $story, $output) }
+  }
+}
+---
+
+You are a professional Database Administrator.
+According to the user's requirements, you should choose the best Tables for the user in List.
+
+— User use database: $databaseInfo
+- User tables: $tables
+
+For example:
+
+- Question(requirements): calculate the average trip length by subscriber type.  User tables: trips, users, subscriber_type *
+- You should anwser: [trips, subscriber_type]
+
+----
+
+Here are the User requirements:
+
+$story
+
+Please choose the best Tables for the user, just return the table names in a list, no explain.
