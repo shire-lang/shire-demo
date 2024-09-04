@@ -1,6 +1,6 @@
 [
   {
-    "name": "内部 API 集成",
+    "name": "apiMarket",
     "description": "生成 API 信息",
     "url": "http://127.0.0.1:8765/api/agent/api-market",
     "responseAction": "Direct"
