@@ -1,0 +1,20 @@
+---
+name: "自动 patch"
+variables:
+  "codepath": /BlogController\.java/ { print }
+  "controllerCode": /BlogController\.java/ { cat }
+  "domainLanguage": /domain-language\.csv/ { cat }
+onStreamingEnd: { parseCode | diff($controllerCode, $output) }
+---
+
+你是一个资深的后台开发，请完成如下需求。
+
+需求：删除博客。
+
+现有代码：
+
+$codepath
+
+$controllerCode
+
+请返有的代码，方便我对比。
