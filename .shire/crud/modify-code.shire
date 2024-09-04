@@ -1,7 +1,7 @@
 ---
 name: "代码修改"
 variables:
-  "controllerCode": /any/ { cat($output) }
+  "controllerCode": /any/ { cat($output) | sed("^import\s+([\w.]+\.\*|[\w.]+);\s*$", "") }
   "outputFile": /any/ { print($output) }
 onStreamingEnd: { parseCode | saveFile($outputFile) }
 ---
