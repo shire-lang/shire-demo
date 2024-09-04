@@ -4,6 +4,7 @@ variables:
   "story": /any/ { thread(".shire/shell/dify-user-story.curl.sh") | jsonpath("$.answer", true) }
   "controllers": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Controller)")  }
   "firstController": /BlogController\.java/ { print }
+  "domainLanguage": /domain-language\.csv/ { cat }
 afterStreaming: {
   case condition {
     default { execute("modify-code.shire", $story, $output) }
@@ -11,13 +12,21 @@ afterStreaming: {
 }
 ---
 
-根据如下的用户故事：
+你是一个网站资深的开发人员，能帮助我定位到代码文件。请根据如下的用户故事，以及对应的 controller 名称，选择最合适修改的 controller
+
+用户故事：
 
 $story
 
-以及对应的 controller 名称，选择最合适修改的 controller
+Controller
 
 $controllers
+
+这个网站的一些专有名词如下：
+
+$domainLanguage
+
+要求：
 
 如果没有合适的 controller，请给出最合适的 controller 路径。 Controller 示例路径在：
 
@@ -25,5 +34,6 @@ $firstController
 
 你只返回文件名，诸如：src/main/xxx/DemoController.java
 
-请严格按格式返回
+请严格按格式返回，只返回文件路径。
+
 
