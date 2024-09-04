@@ -5,11 +5,12 @@ variables:
   "controllers": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Controller)")  }
   "services": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Service)")  }
   "firstController": /BlogController\.java/ { print }
+  "firstService": /BlogService\.java/ { print }
   "domainLanguage": /domain-language\.csv/ { cat }
 onStreamingEnd: { openFile }
 ---
 
-你是一个网站资深的开发人员，能帮助我定位到代码文件。请根据如下的用户故事，以及对应的 controller 名称，选择最合适修改的代码文件
+你是一个网站资深的开发人员，能帮助我定位到代码文件。请根据如下的用户故事，以及对应的 controller, service 名称，选择最合适修改的代码文件
 
 用户故事：
 
@@ -29,9 +30,16 @@ $domainLanguage
 
 要求：
 
-如果没有合适的 controller，请给出最合适的 controller 路径。 Controller 示例路径在：
+如果没有合适的 controller，请给出最合适的 controller 和 service 路径。
+
+Controller 示例路径在：
 
 $firstController
+
+service 示例路径在：
+
+$firstService
+
 
 你只返回文件名，诸如：src/main/xxx/DemoController.java
 
