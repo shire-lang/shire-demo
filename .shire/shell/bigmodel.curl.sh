@@ -6,7 +6,7 @@ curl --location 'https://open.bigmodel.cn/api/paas/v4/chat/completions' \
     "messages": [
         {
             "role": "user",
-            "content": "你好"
+            "content": "${output}"
         }
     ]
 }'

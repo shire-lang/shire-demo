@@ -1,9 +1,7 @@
 ---
 variables:
-  "api": /sampl.sh/ { thread(".shire/shell/bigmodel.curl.sh") | jsonpath("$.choices[0].message.content") }
+  "api": /sampl.sh/ { print("生成 java hello, world") | thread(".shire/shell/bigmodel.curl.sh") | jsonpath("$.choices[0].message.content") }
 ---
-
-hi
 
 $api
 
