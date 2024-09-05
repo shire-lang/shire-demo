@@ -1,12 +1,12 @@
 ---
 name: "Semantic Search"
 variables:
-  "init": /.*.java/ { splitting | embedding("disk") }
+  "init": /.*.java/ { splitting | embedding }
   "input": "博客创建流程"
   "lang": "java"
 afterStreaming: {
     case condition {
-      default { searching($output) | reranking("default") | execute("SummaryQuestion.shire", $output, $input, $lang) }
+      default { searching($output) | execute("SummaryQuestion.shire", $output, $input, $lang) }
     }
  }
 ---
@@ -32,9 +32,9 @@ Think step by step:
 User: Where is the code for the function that calculates the average of a list of numbers?
 
 Response:
-- calculate average, average
+- calculate average, average (should be two separate keywords)
 
 User: $input
 
 Response:
--
+-(should be two separate keywords)

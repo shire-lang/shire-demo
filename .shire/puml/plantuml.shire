@@ -1,0 +1,10 @@
+---
+name: "plantuml"
+onStreamingEnd: { parseCode | saveFile | openFile }
+---
+
+生成一个 Java OO 的 PlantUml 示例。返回格式如下：
+
+```puml
+// Plantuml code
+```
