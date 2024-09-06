@@ -1,0 +1,19 @@
+---
+name: "更新 Service 代码"
+variables:
+  "outputFile": /any/ { print($output) }
+  "serviceCode": /any/ { cat($output) }
+onStreamingEnd: { parseCode | saveFile($outputFile, $output) }
+---
+
+根据如下的需求，对原来的 Service 代码进行修改。如果原始代码为空，请返回新的代码。
+
+需求：
+
+$story
+
+原始代码：
+
+$serviceCode
+
+请返回变更后的代码。

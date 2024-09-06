@@ -1,0 +1,24 @@
+---
+name: "更新 Controller 代码"
+variables:
+  "controllerCode": /any/ { cat($output) }
+  "outputFile": /any/ { print($output) }
+onStreamingEnd: { parseCode | saveFile($outputFile) }
+afterStreaming: {
+    case condition {
+        default { execute("analysis-service.shire", $story, $output) }
+    }
+}
+---
+
+根据如下的需求，对原 Controller 代码进行修改。如果原始代码为空，请返回新的代码。
+
+需求：
+
+$story
+
+原始代码：
+
+$controllerCode
+
+请返回变更后的 Controller 代码。

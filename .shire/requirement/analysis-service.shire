@@ -1,0 +1,36 @@
+---
+name: "分析需求，选择合适的代码文件"
+variables:
+  "firstService": /CinemaService\.java/ { print }
+  "domainLanguage": /domain-language\.csv/ { cat }
+  "controllerCode": /any/ { cat($output) }
+afterStreaming: {
+  case condition {
+    default { execute("modify-service.shire", $story, $output, $controllerCode) }
+  }
+}
+---
+
+你是一个网站资深的开发人员，能帮助我定位到代码文件。请根据如下的用户故事，Controller 代码和对应的 service 名称，选择最合适修改的 service
+
+用户故事：
+
+$story
+
+Controller 代码：
+
+$controllerCode
+
+这个网站的一些专有名词如下：
+
+$domainLanguage
+
+要求：
+
+如果没有合适的 service，请给出最合适的 service 路径。 Service 示例路径在：
+
+$firstService
+
+你只返回文件名，诸如：src/main/xxx/DemoService.java
+
+请严格按格式返回，只返回文件路径，不要包含其他内容。

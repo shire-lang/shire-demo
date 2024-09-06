@@ -1,6 +1,6 @@
 ---
 name: "代码修改"
-onStreamingEnd: { parseCode | saveFile }
+onStreamingEnd: { parseCode | saveFile | openFile }
 ---
 
 根据如下的需求，对原文件的代码进行修改。
@@ -9,9 +9,9 @@ onStreamingEnd: { parseCode | saveFile }
 
 $story
 
-表信息：
+数据库相关信息：
 
-$tableInfo
+$databaseInfo
 
 要求如下：
 
