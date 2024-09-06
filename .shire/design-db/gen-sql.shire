@@ -1,5 +1,5 @@
 ---
-name: "代码修改"
+name: "生成  SQL"
 onStreamingEnd: { parseCode | saveFile | openFile }
 ---
 

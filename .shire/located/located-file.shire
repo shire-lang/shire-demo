@@ -1,7 +1,7 @@
 ---
 name: "定位变更"
 variables:
-  "story": /any/ { thread(".shire/shell/dify-user-story.curl.sh") | jsonpath("$.answer", true) }
+  "story": /any/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
   "controllers": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Controller)")  }
   "services": /.*.java/ { cat | grep("class\s+([a-zA-Z]*Service)")  }
   "firstController": /BlogController\.java/ { print }
