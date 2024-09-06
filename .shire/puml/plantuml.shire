@@ -2,7 +2,7 @@
 name: "设计 UML"
 variables:
   "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
-onStreamingEnd: { parseCode | saveFile | openFile }
+onStreamingEnd: { parseCode | saveFile("docs/flow.puml") | openFile }
 ---
 
 你是一个资深的开发人员，根据用户故事使用 PlantUML 绘制 PUML 时序图。
