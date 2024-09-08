@@ -2,7 +2,7 @@
 name: "生成测试用例"
 actionLocation: ContextMenu
 onStreamingEnd: { parseCode | saveFile($filePath) }
-model: "glm-4-plus"
+model: "codegeex-4"
 ---
 
 你是一个资深的单元测试专家，请根据如下的需求生成对应的 Java 测试代码，请只返回代码方便我使用。
