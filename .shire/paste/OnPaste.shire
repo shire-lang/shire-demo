@@ -1,6 +1,7 @@
 ---
 name: "PasteMaster"
 actionLocation: ContextMenu
+enabled: false
 ---
 
 [interaction: OnPaste]
