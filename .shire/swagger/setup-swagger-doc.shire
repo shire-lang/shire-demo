@@ -1,3 +1,21 @@
 ---
 name: "Setup Swagger Doc"
+variables:
+  "gradleFile": /build\.gradle.kts/ { cat }
+  "codePath": /build\.gradle.kts/ { print }
+onStreamingEnd: { parseCode | patch($codePath, $output) }
+model: "gpt-4o"
 ---
+
+你是一个资深的后台开发，请使用 patch 的项目这个项目添加 springdoc-openapi 支持。
+
+要求：
+
+1. 请不要修改无关的代码。
+2. 请只返回 patch。
+
+Build.gradle.kts 文件内容如下所示：
+
+$gradleFile
+
+请返回 diff patch，方便我直接使用。
