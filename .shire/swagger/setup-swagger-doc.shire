@@ -7,7 +7,7 @@ onStreamingEnd: { parseCode | patch($codePath, $output) }
 model: "gpt-4o"
 ---
 
-你是一个资深的后台开发，请使用 patch 的项目这个项目添加 springdoc-openapi 支持。
+你是一个资深的后台开发，请使用 patch 的项目这个项目添加 springdoc-openapi  使用， Gradle Plugin。
 
 要求：
 
