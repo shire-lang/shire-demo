@@ -39,3 +39,4 @@ out/
 .shire-cache
 
 *.shireEnv.json
+recording.jsonl

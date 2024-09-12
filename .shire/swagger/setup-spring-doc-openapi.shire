@@ -1,5 +1,5 @@
 ---
-name: "Setup Swagger Doc"
+name: "Setup SpringDoc OpenAPI"
 variables:
   "gradleFile": /build\.gradle.kts/ { cat }
   "codePath": /build\.gradle.kts/ { print }

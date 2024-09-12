@@ -1,0 +1,6 @@
+---
+name: "Generate Swagger Doc"
+variables:
+  "controllers": /BlogController.java/ { cat | execute("controller-with-swagger.shire") }
+---
+
