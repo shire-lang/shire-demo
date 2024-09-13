@@ -1,0 +1,10 @@
+---
+name: "Auto Commit and Push"
+afterStreaming: {
+  case condition {
+    default { print("feat: add auto commit and push sample") | commit | push }
+  }
+}
+---
+
+hi
