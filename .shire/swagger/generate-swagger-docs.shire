@@ -1,6 +1,7 @@
 ---
 name: "Generate Swagger Doc"
 variables:
-  "controllers": /BlogController.java/ { cat | execute("controller-with-swagger.shire") }
+  "controllers": /BlogController.java/ { cat }
+  "gen-swagger": /any/ { batch("controller-with-swagger.shire", $controllers) }
+beforeStreaming: { stop }
 ---
-
