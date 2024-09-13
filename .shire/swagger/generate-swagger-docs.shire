@@ -1,14 +1,13 @@
 ---
 name: "Generate Swagger Doc"
+variables:
+  "controllers": /.*.Controller.java/ { print }
+  "gen-swagger": /any/ { batch("controller-with-swagger.shire", $controllers) }
 afterStreaming: {
   case condition {
     default { print("chore: update for swagger doc") | commit | push }
   }
 }
 ---
-
-[]: variables:
-[]:   "controllers": /.*.Controller.java/ { print }
-[]:   "gen-swagger": /any/ { batch("controller-with-swagger.shire", $controllers) }
 
 hi

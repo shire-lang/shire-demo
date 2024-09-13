@@ -23,6 +23,7 @@ public class BlogController {
      * @param id The id of the blog post to retrieve
      * @return The blog post with the specified id
      */
+    @ApiOperation(value = "Get Blog by id", notes = "Retrieve a blog post by its ID")
     @GetMapping("/{id}")
     public BlogPost getBlog(@PathVariable Long id) {
         return blogService.getBlogPostById(id);
@@ -34,7 +35,7 @@ public class BlogController {
      * @param request The request object containing the details of the blog post to be created
      * @return The newly created blog post
      */
-    @ApiOperation(value = "Create a new blog")
+    @ApiOperation(value = "Create a new blog", notes = "Create a new blog post")
     @PostMapping("/")
     public BlogPost cftBlog(@RequestBody CreateBlogRequest request) {
         CreateBlogResponse response = new CreateBlogResponse();
