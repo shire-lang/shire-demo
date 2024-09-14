@@ -1,8 +1,0 @@
----
-variables:
-  "customTables": /./ { table | column }
----
-
-根据如下的信息，生成 SQL：
-
-$customTables
