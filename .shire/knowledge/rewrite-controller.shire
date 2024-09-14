@@ -1,0 +1,8 @@
+---
+name: "Generate Swagger Doc"
+variables:
+  "controllers": /BlogController.java/ { print }
+  "gen-swagger": /any/ { batch("rewrite-controller-method.shire", $controllers) }
+---
+
+hi

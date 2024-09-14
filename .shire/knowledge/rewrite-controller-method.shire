@@ -1,0 +1,23 @@
+---
+name: "Rewrite Controller Method"
+variables:
+  "code": /any/ { cat($input) }
+onStreamingEnd: { parseCode | saveFile($input, $output) }
+---
+
+检查如下的代码中的方法命名是否易于理解，如果不易于理解，请重新命名。
+
+要求：
+
+1. 如果代码 ok，请返回原代码。
+2. 如果不易于理解，请返回修改后的代码。
+
+文件路径：
+
+$input
+
+代码：
+
+$code
+
+如果代码 ok，请返回 ok。如果不易于理解，请返回修改后的代码。
