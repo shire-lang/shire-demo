@@ -1,0 +1,15 @@
+---
+name: "设计 RESTful API"
+variables:
+  "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
+onStreamingEnd: { parseCode | saveFile("docs/api.yml") | openFile }
+model: "codegeex-4"
+---
+
+你是一个资深的开发人员，根据用户故事设计 RESTful API。
+
+用户故事：
+
+$story
+
+请使用 Swagger 格式根据用户故事设计 RESTful API，返回设计的 API。

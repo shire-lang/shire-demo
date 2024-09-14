@@ -1,0 +1,14 @@
+---
+name: "设计 UML"
+variables:
+  "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
+onStreamingEnd: { parseCode | saveFile | openFile }
+---
+
+你是一个资深的开发人员，根据用户故事使用 PlantUML 绘制 PUML 时序图。
+
+用户故事：
+
+$story
+
+请使用 Markdown Code 格式，语言 `puml`，请根据用户故事绘制 PUML 时序图，返回设计的 PUML 代码。
