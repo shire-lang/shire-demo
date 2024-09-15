@@ -10,7 +10,7 @@ model: "gpt-4o"
 []: 详细见：https://spring.io/guides/gs/testing-restdocs
 []: 当且仅当代码中已有测试时，才会生成文档。请确保代码中已有测试。
 
-你是一个资深的后台开发，请使用 patch 的项目这个项目添加 Spring REST Docs 依赖。
+你是一个资深的后台开发，请使用 patch 的项目这个项目添加 Spring REST Docs 依赖，以及对应的 testImplementation: spring-restdocs-mockmvc。
 
 要求：
 
