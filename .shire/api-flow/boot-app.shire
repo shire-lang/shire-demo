@@ -1,0 +1,5 @@
+---
+name: "Blog.sample"
+beforeStreaming: { execute(":bootRun") }
+onStreamingEnd: { parseCode | saveFile | openFile | runCode }
+---
