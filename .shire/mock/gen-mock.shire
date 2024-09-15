@@ -1,6 +1,11 @@
 ---
 name: "Blog.sample"
 onStreamingEnd: { parseCode | saveFile("docs/mock_v0-stubs.json", $output) }
+afterStreaming: {
+   case condition {
+      default { mock("docs/mock_v0-stubs.json") }
+   }
+}
 ---
 
 使用 WireMock 生成一个博客的样例数据，使用 WireMock 的 JSON 格式 + mappings 方式。

@@ -1,5 +1,0 @@
----
-name: "sample"
-variables:
-  "mock": /any/ { thread(".shire/mock/gen-mock.shire") | mock("docs/mock_v0-stubs.json") }
----
