@@ -1,0 +1,25 @@
+---
+name: "添加 @AutoConfigureRestDocs 注解到测试类"
+variables:
+  "code": /any/ { cat($input) }
+onStreamingEnd: { parseCode | saveFile($input, $output) }
+---
+
+为如下的代码添加 Spring RestDocs 支持。即：
+
+1. 添加 @AutoConfigureRestDocs 注解到测试类
+2. 添加对应的 import 代码：`import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs`
+
+要求：
+
+1. 不修改任务代码，只添加对应的注解。
+
+文件路径：
+
+$input
+
+代码：
+
+$code
+
+只返回最后的代码，方便我使用。
