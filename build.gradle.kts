@@ -33,6 +33,7 @@ dependencies {
 
 	implementation("io.swagger:swagger-annotations:1.6.11")
 	compileOnly("org.projectlombok:lombok:1.18.28")
+	annotationProcessor("org.projectlombok:lombok:1.18.28")
 	// h2
 	implementation("com.h2database:h2")
 
