@@ -1,0 +1,5 @@
+---
+name: "sample"
+variables:
+  "mock": /any/ { mock("samples/mock/hackernews_v0-stubs.json") }
+---
