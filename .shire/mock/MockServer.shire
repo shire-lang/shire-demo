@@ -1,5 +1,5 @@
 ---
 name: "sample"
 variables:
-  "mock": /any/ { mock("samples/mock/hackernews_v0-stubs.json") }
+  "mock": /any/ { thread(".shire/mock/gen-mock.shire") | mock("docs/mock_v0-stubs.json") }
 ---

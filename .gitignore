@@ -40,3 +40,4 @@ out/
 
 *.shireEnv.json
 recording.jsonl
+docs/mock_v0-stubs.json
