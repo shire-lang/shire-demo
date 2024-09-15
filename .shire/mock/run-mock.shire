@@ -1,0 +1,15 @@
+---
+name: "Blog.sample"
+variables:
+  "mockApi": /mock_v0-stubs\.json/ { cat }
+beforeStreaming: { mock("docs/mock_v0-stubs.json") }
+onStreamingEnd: { parseCode | saveFile | openFile | runCode }
+---
+
+根据如下的 WireMock API，生成 Intellij IDEA 的 HttpClient 代码。
+
+$mockApi
+
+
+请直接返回 ```http request 代码块，注意语言是：`http request` ，方便我直接测试和使用
+
