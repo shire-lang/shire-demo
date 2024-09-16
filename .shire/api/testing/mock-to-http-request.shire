@@ -1,12 +1,14 @@
 ---
 name: "Run Mock in before Streaming"
+model: "gpt-4o"
 variables:
-  "mockApi": /mock_v0-stubs\.json/ { cat }
+  "controllerCode": /BlogController\.java/ { cat }
+beforeStreaming: { execute(":bootRun") }
 onStreamingEnd: { parseCode | saveFile | openFile | runCode }
 ---
 
-根据如下的 WireMock API，生成 Intellij IDEA 的 Http Client 代码。
+根据如下的代码，生成 Intellij IDEA 的 Http Client 代码。
 
-$mockApi
+$controllerCode
 
 请直接返回 JetBrains 的  markdown `http request` 代码块，注意 markdown 语言是：`http request`` ，方便我直接测试和使用
