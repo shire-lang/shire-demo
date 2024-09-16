@@ -1,5 +1,7 @@
 ---
 name: "Blog.sample"
-beforeStreaming: { execute(":bootRun") }
-onStreamingEnd: { parseCode | saveFile | openFile | runCode }
+model: "codegeex-4"
+beforeStreaming: { execute("samples/hello.py") }
 ---
+
+hi

@@ -5,18 +5,9 @@ variables:
 onStreamingEnd: { parseCode | saveFile($input, $output) }
 ---
 
-为如下的代码，生成 Swagger Doc 。
+为如下的代码，生成 Swagger Doc。不修改任务代码，只添加对应的注解。
 
-要求：
-
-1. 不修改任务代码，只添加对应的注解。
-
-文件路径：
-
-$input
-
-代码：
-
-$code
+文件路径：$input
+代码：$code
 
 只返回最后的代码，方便我使用。
