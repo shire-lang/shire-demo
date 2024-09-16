@@ -1,7 +1,0 @@
----
-name: "Blog.sample"
-model: "codegeex-4"
-beforeStreaming: { execute("samples/hello.py") }
----
-
-hi

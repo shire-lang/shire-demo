@@ -1,0 +1,6 @@
+---
+name: "Blog.sample"
+beforeStreaming: { execute(":bootRun") }
+---
+
+hi
