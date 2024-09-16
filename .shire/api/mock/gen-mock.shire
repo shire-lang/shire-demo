@@ -8,7 +8,7 @@ afterStreaming: {
 }
 ---
 
-使用 WireMock 生成一个博客的样例数据，使用 WireMock 的 JSON 格式 + mappings 方式。
+使用 WireMock 生成一个博客 API CRUD 的样例数据，使用 WireMock 的 JSON 格式 + mappings 方式。
 
 返回 WireMap 格式示例：
 
