@@ -2,7 +2,7 @@
 name: "Run Mock in before Streaming"
 variables:
   "mockApi": /mock_v0-stubs\.json/ { cat }
-onStreamingEnd: { parseCode | saveFile | openFile | execute }
+onStreamingEnd: { parseCode | saveFile | openFile | runCode }
 ---
 
 根据如下的 WireMock API，生成 Intellij IDEA 的 Http Client 代码。

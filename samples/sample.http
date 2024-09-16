@@ -1,0 +1,25 @@
+#### 创建博客
+POST /api/blogs
+Content-Type: application/json
+
+{
+  "title": "My First Blog Post",
+  "content": "This is the content of my first blog post."
+}
+
+### 获取博客
+GET /api/blogs/1
+Content-Type: application/json
+
+### 更新博客
+PUT /api/blogs/1
+Content-Type: application/json
+
+{
+  "title": "My Updated Blog Post",
+  "content": "This is the updated content of my blog post."
+}
+
+#### 删除博客
+DELETE /api/blogs/1
+Content-Type: application/json
