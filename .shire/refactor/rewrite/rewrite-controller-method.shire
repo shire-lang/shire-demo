@@ -1,5 +1,5 @@
 ---
-name: "Rewrite Controller Method"
+name: "Rewrite Controller Code"
 variables:
   "code": /any/ { cat($input) }
 onStreamingEnd: { parseCode | saveFile($input, $output) }
