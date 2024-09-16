@@ -23,6 +23,9 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+
+	implementation("io.rest-assured:rest-assured:5.5.0")
+
 	implementation("org.json:json:20231013")
 
 	implementation("org.springframework.boot:spring-boot-starter-test")
