@@ -1,0 +1,15 @@
+---
+name: "Locust Benchmark"
+variables:
+  "inputFile": "src/main/java/com/phodal/shire/controller/BlogController.java"
+  "code": /mock_v0-stubs\.json/ { cat }
+onStreamingEnd: { parseCode | saveFile | openFile | runCode }
+---
+
+根据参考 WireMock 的 API 设计，生成 Locust 负载测试代码。
+
+对应的 WireMock 数据：
+
+$code
+
+请返回最后的 Locust 测试代码，方便我使用。
