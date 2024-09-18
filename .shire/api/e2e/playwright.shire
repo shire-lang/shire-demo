@@ -1,0 +1,43 @@
+---
+name: "Playwright"
+variables:
+  "code": /mock_v0-stubs\.json/ { cat }
+onStreamingEnd: { parseCode | saveFile | openFile | runCode }
+---
+
+根据如下的前端组件，生成 Playwright 测试代码。
+
+1. 请只返回 TypeScript 代码，不要返回其它
+
+对应的前端代码：
+
+```javascript
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+
+  );
+}
+
+export default App;
+```
+
+请返回最后的 Playwright 的  TypeScript 代码，方便我使用。
