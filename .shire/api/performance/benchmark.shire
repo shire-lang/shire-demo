@@ -9,10 +9,9 @@ onStreamingEnd: { parseCode | saveFile | openFile | runCode }
 根据参考 WireMock 的 API 设计，生成 Apache Benchmark 测试代码。
 
 1. 请尽可能用一个 shell 文件来测试所有的请求。
-2. 使用 markdown 里的 `shell` 语言代码块
 
 对应的 WireMock 数据：
 
 $code
 
-请返回最后的 ab shell 代码，使用 markdown 里的 `shell` 语言代码块，方便我使用。
+请返回最后的 ab 代码，方便我使用。
