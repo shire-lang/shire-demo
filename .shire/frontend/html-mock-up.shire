@@ -1,0 +1,11 @@
+---
+name: "footer"
+onStreamingEnd: { parseCode | saveFile | webview }
+---
+
+生成一个移动端的底部导航栏，要求如下：
+
+1. 底部导航栏的高度为 50px
+2. 底部导航栏的背景色为 f0f0f0
+
+请使用 HTML 和 CSS 生成底部导航栏，只需要生成一个 html 文件。
