@@ -1,6 +1,6 @@
 ---
 name: "footer"
-onStreamingEnd: { parseCode | saveFile | webview }
+onStreamingEnd: { parseCode | saveFile | showWebView | openWebpage }
 ---
 
 生成一个移动端的底部导航栏，要求如下：
