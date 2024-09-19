@@ -1,6 +1,6 @@
 ---
 name: "footer"
-onStreamingEnd: { parseCode | saveFile | showWebView }
+onStreamingEnd: { parseCode | showWebView }
 ---
 
 生成一个银行 Web 导航栏，要求如下：
