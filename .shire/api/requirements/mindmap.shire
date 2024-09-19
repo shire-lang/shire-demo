@@ -1,0 +1,44 @@
+---
+name: "脑图生成"
+variables:
+  "story": /any/ { thread(".shire/shell/github-issue.curl.sh") | jsonpath("$.body") }
+onStreamingEnd: { parseCode | saveFile | openFile }
+---
+
+请根据如下的用户故事，生成实例化需求脑图。
+
+要求。
+
+1. 成功场景(使用 +)和失败场景(使用 -)分别用不同的颜色标记
+2. 考虑边界条件和异常情况：
+   - 为每个主要功能点识别至少一个边界条件（如最大/最小值、极限情况）
+   - 为每个关键操作设计至少一个异常情况（如网络断开、数据不一致）
+
+需求如下：
+
+$story
+
+你的返回示例如下：
+
+```puml
+@startmindmap
+<style>
+mindmapDiagram {
+  .success {
+    BackgroundColor lightgreen
+  }
+  .error {
+    BackgroundColor #FFBBCC
+  }
+}
+</style>
+
++ success
+++ some first level node <<success>>
++++ some second level node <<success>>
+-- some second level node <<error>>
+--- some third level node <<success>>
+@endmindmap
+```
+
+请使用 PlantUML 语法生成脑图。
