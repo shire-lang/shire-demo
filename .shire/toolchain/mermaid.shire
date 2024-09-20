@@ -1,0 +1,39 @@
+---
+name: "设计 Mermaid"
+variables:
+  "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
+onStreamingEnd: { parseCode | saveFile("docs/flow.mermaid") | openFile }
+---
+
+识别「电影」这个产品所涉及的领域对象，及其关系。
+
+相关信息：
+
+$story
+
+输出以使用 Mermaid 的 flowchart 语法来输出，格式示例如下
+
+```mermaid
+flowchart TD
+        subgraph SMS[策略管理系统]
+            STRATEGY["策略<br>STRATEGY"]
+            RULE_SET["规则集<br>RULE_SET"]
+            SCAN_TASK["扫描任务<br>SCAN_TASK"]
+            SCOPE["适用范围<br>STRATEGY_SCOPE"]
+        end
+
+        subgraph RSS[规则和扫描系统]
+            RULE["规则<br>RULE"]
+            SCAN_INTERFACE["扫描接口<br>SCAN_INTERFACE"]
+            SUB_SCAN_TASK["子扫描任务<br>SUB_SCAN_TASK"]
+            SCAN_RESULT["扫描结果<br>SCAN_RESULT"]
+        end
+
+        STRATEGY -- "包含" --> RULE_SET
+        STRATEGY -- "继承自" --> STRATEGY
+        STRATEGY -- "发起" --> SCAN_TASK
+        ...
+
+        class STRATEGY,RULE_SET,SCAN_TASK,SCOPE sms;
+        class RULE,SCAN_INTERFACE,SUB_SCAN_TASK,SCAN_RESULT rss;
+```
