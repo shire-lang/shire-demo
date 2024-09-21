@@ -1,5 +1,5 @@
 ---
-name: "Apache Benchmark"
+name: "K6 Benchmark"
 variables:
   "inputFile": "src/main/java/com/phodal/shire/controller/BlogController.java"
   "code": /mock_v0-stubs\.json/ { cat }
