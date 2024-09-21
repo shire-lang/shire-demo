@@ -1,0 +1,5 @@
+---
+onStreamingEnd: { openFile("docs/requirements.xlsx") }
+---
+
+hi
