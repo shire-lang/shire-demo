@@ -2,6 +2,7 @@
 name: "Gandalf"
 variables:
   "functions": /any/ { provider("functions") }
+  "variables": /any/ { provider("variables") }
 onStreamingEnd: { parseCode | saveFile | openFile }
 ---
 
@@ -15,7 +16,7 @@ onStreamingEnd: { parseCode | saveFile | openFile }
 Shire DSL 语法由两部分组件
 
 1. 类似于 FrontMatter 的 Hobbit Hole 配置：用于定义数据结构。
- - Variables：用于定义过程变量，主要由 Pattern-Action：用于定义数据处理逻辑。
+ - Variables：用于自定义过程变量，主要由 Pattern-Action：用于定义数据处理逻辑。
  - Output：用于定义输出。
 2. 基于 Velocity 模板引擎的 Template：用于定义 LLM 模板。
 
@@ -24,9 +25,9 @@ Shire DSL 语法由两部分组件
 ```shire
 ---
 name: "自动  patch" // 这里是相关的 Shire 配置
-variables:
+variables:  // 用户自定义的变量
   "codepath": /BlogController\.java/ { print } // 使用正则表达式来匹配代码，cat 用来获取文件路径，中间的 | 是  pipe，print 是一个 Shire 的  PatternAction  函数，用于输出代码中的内容，给变量 codepath 赋值。
-  "controllerCode": /BlogController\.java/ { cat }
+  "controllerCode": /BlogController\.java/ { cat } // 这里的 /BlogController\.java/ 必须是一个  pattern，或者 /null/ 表示不匹配
   "domainLanguage": /domain-language\.csv/ { cat }
 onStreamingEnd: { parseCode | patch($codepath, $output) } // 这里使用的是 Shire 自带的 PostProcess 函数
 ---
@@ -53,6 +54,12 @@ $controllerCode
 请确保你所调用的 Shire 函数是正确的，这里是 Shire 函数的列表：
 
 $functions
+
+## Shire 内建的变量
+
+请确保你所调用的 Shire 内建变量是正确的，这里是 Shire 内建变量的列表：
+
+$variables
 
 ## 用户需求
 
