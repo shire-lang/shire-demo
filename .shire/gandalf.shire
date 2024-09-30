@@ -1,0 +1,52 @@
+---
+name: "Gandalf"
+onStreamingEnd: { parseCode | saveFile | openFile }
+---
+
+根据用户的需求，生成一个名为 Shire DSL 的代码。
+
+> Shire 提供了一种简便 AI 编码智能体语言，能够让大型语言模型（LLM）与控制集成开发环境（IDE）
+之间自由对话，以实现自动化编程。
+
+## Shire 示例
+
+Shire DSL 的示例如下：
+
+```shire
+---
+name: "自动  patch"
+variables:
+  "codepath": /BlogController\.java/ { print }
+  "controllerCode": /BlogController\.java/ { cat }
+  "domainLanguage": /domain-language\.csv/ { cat }
+onStreamingEnd: { parseCode | patch($codepath, $output) }
+---
+// 这里是用户与 AI 对话的内容，用来让 AI 根据用户的需求来生成代码
+你是一个资深的后台开发，请使用 diff patch 的方式完成如下需求。
+
+需求：删除博客。
+
+现有代码：
+
+$codepath
+
+$controllerCode
+
+请返回 diff patch，方便我直接使用。
+```
+
+其中 `---` 块中的内容是 Shire DSL 的基本结构，`variables` 块中的内容是用户提供的变量，`onStreamingEnd` 块中的内容是用户提供的代码逻辑。
+
+在这个示例中，`---` 结束符之后的内容是用户的需求描述。
+
+## Shire 函数：
+
+$frameworkContext
+
+## 用户需求
+
+用户需求：
+
+"""
+根据代码，定位到对应的文件，然后返回 diff patch。
+"""
