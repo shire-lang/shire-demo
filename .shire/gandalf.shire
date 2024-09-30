@@ -5,16 +5,16 @@ variables:
 onStreamingEnd: { parseCode | saveFile | openFile }
 ---
 
-根据用户的需求，生成一个名为 Shire DSL 的代码。
+根据用户的需求，生成 Shire 语言代码。
 
-> Shire 提供了一种简便 AI 编码智能体语言，能够让大型语言模型（LLM）与控制集成开发环境（IDE）
+> Shire 语言提供了一种简便 AI 编码智能体语言，能够让大型语言模型（LLM）与控制集成开发环境（IDE）
 之间自由对话，以实现自动化编程。
 
 $frameworkContext
 
 ## Shire 示例
 
-Shire DSL 的示例如下：
+如下是一个 Shire 语言代码的示例：
 
 ```shire
 ---
@@ -43,13 +43,15 @@ $controllerCode
 
 在这个示例中，`---` 结束符之后的内容是用户的需求描述。
 
-## Shire 函数：
+## Shire 函数
+
+请确保你所调用的 Shire 函数是存在于，如下的函数中：
 
 $functions
 
 ## 用户需求
 
-用户需求：
+用户需求如下，请根据如上的 Shire 语言定义，生成 Shire 语言代码：
 
 """
 根据代码，定位到对应的文件，然后返回 diff patch。
