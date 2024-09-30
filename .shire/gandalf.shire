@@ -25,10 +25,10 @@ Shire DSL 语法由两部分组件
 ---
 name: "自动  patch" // 这里是相关的 Shire 配置
 variables:
-  "codepath": /BlogController\.java/ { print } // 使用正则表达式来匹配代码，print 用于输出代码中的内容，给变量 codepath 赋值。
+  "codepath": /BlogController\.java/ { print } // 使用正则表达式来匹配代码，cat 用来获取文件路径，中间的 | 是  pipe，print 是一个 Shire 的  PatternAction  函数，用于输出代码中的内容，给变量 codepath 赋值。
   "controllerCode": /BlogController\.java/ { cat }
   "domainLanguage": /domain-language\.csv/ { cat }
-onStreamingEnd: { parseCode | patch($codepath, $output) }
+onStreamingEnd: { parseCode | patch($codepath, $output) } // 这里使用的是 Shire 自带的 PostProcess 函数
 ---
 // 如下是用户编写的 AI 提示词，用来让 AI 根据用户的需求来生成代码
 你是一个资深的后台开发，请使用 diff patch 的方式完成如下需求。
@@ -48,7 +48,7 @@ $controllerCode
 
 在这个示例中，`---` 结束符之后的内容是用户的需求描述。
 
-## Shire 函数
+## Shire Pattern-Action 函数
 
 请确保你所调用的 Shire 函数是正确的，这里是 Shire 函数的列表：
 
