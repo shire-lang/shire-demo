@@ -1,0 +1,28 @@
+---
+name: "Auto Test JavaScript"
+description: "AutoTest"
+interaction: RunPanel
+actionLocation: ContextMenu
+when: $fileName.contains(".ts")
+---
+Write unit test for following ${language} code.
+
+${frameworkContext}
+
+Here is the relate code maybe you can use
+${relatedClasses}
+
+This is the class where the source code resides:
+${currentClassCode}
+
+Here is the imports to help you understand:
+
+${imports}
+
+Here is the source code to be tested:
+
+```${language}
+${selection}
+```
+
+Start method test code with Markdown code block here:

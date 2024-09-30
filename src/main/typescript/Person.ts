@@ -1,3 +1,13 @@
+// 引入整个模块
+import * as fs from 'fs';
+// 引入特定导出
+import { readFileSync } from 'fs';
+// 引入默认导出
+import express from 'express';
+// 引入类型
+import type { SomeType } from './types';
+
+
 class Orz {
     constructor(public name: string) {
     }
