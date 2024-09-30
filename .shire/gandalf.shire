@@ -3,6 +3,7 @@ name: "Gandalf"
 variables:
   "functions": /any/ { provider("functions") }
   "variables": /any/ { provider("variables") }
+  "processors": /any/ { provider("processors") }
 onStreamingEnd: { parseCode | saveFile | openFile }
 ---
 
@@ -60,6 +61,12 @@ $functions
 请确保你所调用的 Shire 内建变量是正确的，这里是 Shire 内建变量的列表：
 
 $variables
+
+## Shire 内建的 onStreamingEnd 函数
+
+onStreamingEnd 是由一系列的  PostProcess 组件的，如下是 Shire 内建的  onStreamingEnd 函数。用于处理 AI 返回结果：
+
+$processors
 
 ## 用户需求
 
