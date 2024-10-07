@@ -1,0 +1,9 @@
+---
+name: "hello"
+functions:
+  normal: ".shire/ffi/hello.js"(string)
+variables:
+  "var2": /.*ple.shire/ { normal("sample") }
+---
+
+hi, $var2
