@@ -2,7 +2,7 @@
 name: "hello"
 afterStreaming: {
     case condition {
-        default { approvalExecute("boot-app.shire") }
+        default { approvalExecute("hi.shire") }
     }
 }
 ---
