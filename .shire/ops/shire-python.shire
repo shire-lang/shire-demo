@@ -1,0 +1,20 @@
+---
+name: "自动执行脚本"
+actionLocation: ContextMenu
+variables:
+  "script_list": /.*\.py/ { print }
+onStreamingEnd: { parseCode | openFile | runCode }
+---
+
+根据以下输入选择一个Python脚本并执行：
+
+```
+$selection
+```
+
+可选脚本：
+
+${script_list}
+
+请使用  markdown block，返回要执行的脚本文件路径，如：xxx/xxx.py
+
