@@ -23,6 +23,12 @@ React demo see in `.shire/frontend/react-mock-up.shire`
 
 ![](screenshots/mock-server-wiremock.png)
 
+### `openFile` function
+
+Mermaid See in: `.shire/toolchain/mermaid.shire`
+
+![](screenshots/mermaid.png)
+
 ## LICENSE
 
 This code is distributed under the MPL 2.0 license. See `LICENSE` in this directory.

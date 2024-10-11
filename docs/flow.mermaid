@@ -1,0 +1,44 @@
+flowchart TD
+    subgraph FILM_PRODUCTION[电影生产]
+        FILM_STUDIO["电影公司<br>FILM_STUDIO"]
+        DIRECTOR["导演<br>DIRECTOR"]
+        ACTOR["演员<br>ACTOR"]
+        SCRIPT["剧本<br>SCRIPT"]
+        FILM_STUDIO --> DIRECTOR
+        FILM_STUDIO --> ACTOR
+        DIRECTOR --> SCRIPT
+        ACTOR --> SCRIPT
+    end
+
+    subgraph FILM_DISTRIBUTION[电影发行]
+        DISTRIBUTOR["发行商<br>DISTRIBUTOR"]
+        MARKETING["市场营销<br>MARKETING"]
+        RELEASE_SCHEDULE["上映计划<br>RELEASE_SCHEDULE"]
+        DISTRIBUTOR --> MARKETING
+        DISTRIBUTOR --> RELEASE_SCHEDULE
+    end
+
+    subgraph FILM_EXHIBITION[电影展示]
+        CINEMA["电影院<br>CINEMA"]
+        SCREENING["放映<br>SCREENING"]
+        TICKET["票务<br>TICKET"]
+        CINEMA --> SCREENING
+        SCREENING --> TICKET
+    end
+
+    subgraph FILM_CONSUMPTION[电影消费]
+        AUDIENCE["观众<br>AUDIENCE"]
+        VIEWING["观看<br>VIEWING"]
+        REVIEW["评论<br>REVIEW"]
+        AUDIENCE --> VIEWING
+        AUDIENCE --> REVIEW
+    end
+
+    FILM_PRODUCTION --> FILM_DISTRIBUTION
+    FILM_DISTRIBUTION --> FILM_EXHIBITION
+    FILM_EXHIBITION --> FILM_CONSUMPTION
+
+    class FILM_STUDIO,DIRECTOR,ACTOR,SCRIPT production
+    class DISTRIBUTOR,MARKETING,RELEASE_SCHEDULE distribution
+    class CINEMA,SCREENING,TICKET exhibition
+    class AUDIENCE,VIEWING,REVIEW consumption
