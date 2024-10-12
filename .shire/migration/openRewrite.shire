@@ -1,0 +1,8 @@
+---
+name: "升级 Spring Boot"
+onStreamingEnd: { parseCode | saveFile("docs/rewrite.yml", $output) | openFile | runCode }
+---
+
+编写 OpenRewrite yml 配置来迁移已有系统，以升级 org.springframework.boot 到 3.3.4 （这个版本是存在的）
+
+只返回 OpenRewrite yml 配置代码。
