@@ -4,8 +4,6 @@ interaction: OnPaste
 enabled: false
 ---
 
-[interaction: OnPaste]
-
 代码生成。根据当前的代码上下文（光标前后），对用户粘贴的代码，生成新的代码。
 
 光标前的代码：
