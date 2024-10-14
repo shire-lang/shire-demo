@@ -2,6 +2,7 @@
 name: "生成测试用例"
 actionLocation: ContextMenu
 onStreamingEnd: { parseCode | saveFile($filePath) }
+beforeStreaming: { parseCode | saveFile($filePath) }
 model: "codegeex-4"
 ---
 
