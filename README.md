@@ -1,4 +1,4 @@
-# Shire Lang Spring/Java Demo project
+# Shire Demo project
 
 Shire offers a straightforward AI Coding Agent Language
 that enables communication between an LLM and control IDE for automated programming.
