@@ -1,5 +1,5 @@
 ---
-name: "设计 RESTful API"
+name: "Design RESTful API"
 variables:
   "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
 onStreamingEnd: { parseCode | saveFile("docs/api.yml") | openFile }
