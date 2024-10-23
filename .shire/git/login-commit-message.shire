@@ -5,6 +5,7 @@ interaction: AppendCursor
 actionLocation: CommitMenu
 variables:
   "storyId": /any/ { thread(".shire/shell/fetch-jira.sh") | jsonpath("$.id") }
+onStreamingEnd: { parseCode }
 ---
 
 为给定的变更（Diff）编写一个连贯但具有描述性的代码提交信息。
@@ -14,13 +15,16 @@ variables:
 - 然后留下一个空行，如有必要，继续详细说明。
 - 说明应该少于 200 个字符。
 
+现有的变更如下：
+
+$currentChanges
+
 遵循常规提交规范，例如：
 
 - fix(authentication): 修复密码正则表达式模式问题 #$storyId
 - feat(storage): 添加对S3存储的支持 #$storyId
-- test(java): 修复用户控制器的测试用例 #$storyId
+- test(java): 修复用户控制器的测试用例  #$storyId
 - docs(architecture): 在主页添加架构图 #$storyId
 
-Diff：
+只返回提交信息，不使用 ``` 标记。
 
-$currentChanges
