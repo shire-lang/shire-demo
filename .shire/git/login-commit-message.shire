@@ -5,7 +5,6 @@ interaction: AppendCursor
 actionLocation: CommitMenu
 variables:
   "storyId": /any/ { thread(".shire/shell/fetch-jira.sh") | jsonpath("$.id") }
-onStreamingEnd: { parseCode }
 ---
 
 为给定的变更（Diff）编写一个连贯但具有描述性的代码提交信息。
