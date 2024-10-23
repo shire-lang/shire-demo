@@ -2,7 +2,6 @@
 name: "Commit message"
 description: "生成提交信息"
 interaction: AppendCursor
-actionLocation: CommitMenu
 ---
 
 为给定的变更（Diff）编写一个连贯但具有描述性的代码提交信息。
