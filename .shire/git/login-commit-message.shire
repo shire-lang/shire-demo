@@ -10,7 +10,7 @@ variables:
 为给定的变更（Diff）编写一个连贯但具有描述性的代码提交信息。
 
 - 确保包含修改了什么以及为什么。
-- 以不超过 50 个字符的祈使句形式开头。
+- 以不超过 50 个字符的祈使句形式开头，带上 Jira 编号。
 - 然后留下一个空行，如有必要，继续详细说明。
 - 说明应该少于 200 个字符。
 
@@ -20,10 +20,12 @@ $currentChanges
 
 遵循常规提交规范，例如：
 
-- fix(authentication): 修复密码正则表达式模式问题 #$storyId
-- feat(storage): 添加对S3存储的支持 #$storyId
-- test(java): 修复用户控制器的测试用例  #$storyId
-- docs(architecture): 在主页添加架构图 #$storyId
+- fix(authentication): 修复密码正则表达式模式问题
+- feat(storage): 添加对S3存储的支持
+- test(java): 修复用户控制器的测试用例
+- docs(architecture): 在主页添加架构图
+
+我的需求\Jira编号是：$storyId
 
 只返回提交信息，不使用 ``` 标记。
 
