@@ -1,0 +1,98 @@
+syntax = "proto3";
+
+package example.v1;
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/empty.proto";
+
+// 用户状态枚举
+enum UserStatus {
+  USER_STATUS_UNSPECIFIED = 0;  // 未指定状态
+  USER_STATUS_ACTIVE = 1;       // 活跃
+  USER_STATUS_INACTIVE = 2;     // 非活跃
+  USER_STATUS_BANNED = 3;       // 已封禁
+}
+
+// 地址信息
+message Address {
+  string street = 1;
+  string city = 2;
+  string country = 3;
+  string postal_code = 4;
+}
+
+// 联系方式
+message Contact {
+  string email = 1;
+  string phone = 2;
+
+  // 展示如何使用 oneof
+  oneof preferred_contact {
+    string work_email = 3;
+    string mobile_phone = 4;
+  }
+}
+
+// 用户基本信息
+message UserProfile {
+  // 基础字段
+  string user_id = 1;
+  string username = 2;
+  string full_name = 3;
+  int32 age = 4;
+  bool is_verified = 5;
+  UserStatus status = 6;
+  double account_balance = 7;
+
+  // 复杂字段
+  Address address = 8;
+  Contact contact = 9;
+  google.protobuf.Timestamp created_at = 10;
+  google.protobuf.Timestamp last_login = 11;
+
+  // 数组字段
+  repeated string interests = 12;
+  repeated int32 scores = 13;
+
+  // Map 字段
+  map<string, string> metadata = 14;
+  map<int32, string> achievements = 15;
+
+  // 保留字段，用于向后兼容
+  reserved 16, 17, 18;
+  reserved "old_field", "deprecated_field";
+}
+
+// 创建用户请求
+message CreateUserRequest {
+  UserProfile profile = 1;
+}
+
+// 创建用户响应
+message CreateUserResponse {
+  string user_id = 1;
+  string message = 2;
+}
+
+// 查询用户请求
+message GetUserRequest {
+  string user_id = 1;
+}
+
+// 用户服务定义
+service UserService {
+  // 创建用户
+  rpc CreateUser(CreateUserRequest) returns (CreateUserResponse);
+
+  // 获取用户信息
+  rpc GetUser(GetUserRequest) returns (UserProfile);
+
+  // 删除用户
+  rpc DeleteUser(GetUserRequest) returns (google.protobuf.Empty);
+
+  // 获取用户流
+  rpc StreamUsers(google.protobuf.Empty) returns (stream UserProfile);
+
+  // 双向流示例
+  rpc ChatStream(stream UserProfile) returns (stream UserProfile);
+}
