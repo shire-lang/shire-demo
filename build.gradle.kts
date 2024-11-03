@@ -40,6 +40,8 @@ dependencies {
 	// h2
 	implementation("com.h2database:h2")
 
+	implementation("com.google.protobuf:protobuf-java:4.28.3")
+
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 	implementation(kotlin("stdlib-jdk8"))
 }

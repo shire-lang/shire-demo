@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package example.v1;
+package com.phodal.shire.demo.model;
 
 import "google/protobuf/timestamp.proto";
 import "google/protobuf/empty.proto";
