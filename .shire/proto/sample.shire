@@ -1,0 +1,25 @@
+---
+name: "ExplainProtoBuf"
+description: "ExplainProtoBuf"
+interaction: RunPanel
+actionLocation: IntentionMenu
+---
+
+解释如下 ${language} code.
+
+${frameworkContext}
+
+#if($relatedClasses.length() > 0 )
+Here is the relate code maybe you can use
+${relatedClasses}
+#end
+
+Here is the imports to help you understand:
+
+${imports}
+
+Here is the source code to be tested:
+
+```${language}
+${selection}
+```
