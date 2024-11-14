@@ -1,5 +1,5 @@
 ---
-name: "ExplainProtoBuf"
+name: "Protobuf with context"
 description: "ExplainProtoBuf"
 interaction: RunPanel
 actionLocation: IntentionMenu
@@ -17,6 +17,8 @@ ${relatedClasses}
 Here is the imports to help you understand:
 
 ${imports}
+
+$methodCaller
 
 Here is the source code to be tested:
 

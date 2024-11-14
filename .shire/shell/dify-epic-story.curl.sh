@@ -2,7 +2,7 @@ curl -X POST 'https://api.dify.ai/v1/completion-messages' \
   --header "Authorization: Bearer ${epicStory}" \
   --header 'Content-Type: application/json' \
   --data-raw '{
-      "inputs": {"story_list": ${story_list}, "feature": "Hello, world!"},
+      "inputs": {"feature": "${feature}"},
       "response_mode": "streaming",
       "user": "phodal"
   }'

@@ -41,4 +41,3 @@ out/
 *.shireEnv.json
 recording.jsonl
 docs/mock_v0-stubs.json
-src/main/java/com/phodal/shire/demo/model/User.java

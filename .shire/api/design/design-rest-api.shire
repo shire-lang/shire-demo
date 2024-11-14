@@ -1,6 +1,7 @@
 ---
 name: "Design RESTful API"
 variables:
+  "feature": "Share Video"
   "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
 onStreamingEnd: { parseCode | saveFile("docs/api.yml") | openFile }
 model: "codegeex-4"
