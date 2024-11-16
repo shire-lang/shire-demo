@@ -7,6 +7,13 @@ import com.phodal.shire.demo.service.BlogService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * Hello
+ *
+ * ```shire
+ * hi
+ * ```
+ */
 @RestController
 @RequestMapping("/blog")
 public class BlogController {
