@@ -4,6 +4,11 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * TODO: this is for sonar issue as example, don't fix any code smell issue.
+ * TODO: this is for sonar issue as example, don't fix any code smell issue.
+ * TODO: this is for sonar issue as example, don't fix any code smell issue.
+ */
 public class FileUtil {
     public static void readFile(String filePath) throws Exception { // 不必要的 throws Exception
         BufferedReader reader = null;
