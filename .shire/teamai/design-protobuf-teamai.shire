@@ -1,0 +1,18 @@
+---
+name: "Design Profobuf IDL"
+actionLocation: ContextMenu
+variables:
+  "spec": /any/ { thread(".shire/shell/fetch-teamai-spec.sh") | jsonpath("$.[1].content") }
+onStreamingEnd: { parseCode | saveFile | openFile }
+---
+
+Please based on the user's input and spec, generate the corresponding Proto file.
+
+Spec is as follows:
+
+```
+$spec
+```
+
+The user's requirement is: $selection
+
