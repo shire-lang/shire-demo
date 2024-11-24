@@ -1,0 +1,15 @@
+---
+name: "Web"
+description: "Here is a description of the action."
+interaction: AppendCursor
+actionLocation: ContextMenu
+variables:
+  "code": /any/ {
+    open("https://v0.dev/") | waitFor("#username") | input("#username", "user123") | input("#password", "password123")
+  }
+---
+
+[notes]: For more options, see [the docs](https://shire.phodal.com/)
+
+You are an experienced software development engineer skilled in using Test-Driven Development (TDD) to develop software.
+You need to help users write test code based on their requirements.
