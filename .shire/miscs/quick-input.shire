@@ -5,7 +5,7 @@ actionLocation: InputBox
 onStreamingEnd: { insertNewline | formatCode }
 ---
 
-根据用户的输入生成代码。如下是用户的输入：
+根据用户的输入生成 $language 代码。如下是用户的输入：
 
 ```
 $input
