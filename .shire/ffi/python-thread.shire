@@ -1,0 +1,7 @@
+---
+name: "hello"
+variables:
+  "var2": /.*ple.shire/ { thread(".shire/ffi/run-python.sh") }
+---
+
+hello, $var2
