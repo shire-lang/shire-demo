@@ -8,4 +8,4 @@ then
 fi
 
 # 运行hello.py脚本
-python3 hello.py
+python3 issue-146.py
