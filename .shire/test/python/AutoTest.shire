@@ -1,0 +1,29 @@
+---
+name: "AutoTest Python"
+description: "AutoTest"
+interaction: RightPanel
+actionLocation: ContextMenu
+when: { $fileName.contains(".py") }
+onStreamingEnd: { parseCode | saveFile }
+---
+
+Write unit test for following ${language} code.
+
+$frameworkContext
+
+Here is the relate code maybe you can use
+
+$relatedClasses
+
+This is the class where the source code resides:
+
+$currentClassCode
+
+Here is imports
+
+${imports}
+
+Here is the source code to be tested:
+
+$selection
+
