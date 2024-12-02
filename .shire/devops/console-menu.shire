@@ -1,0 +1,9 @@
+---
+name: "修复问题"
+description: "Here is a description of the action."
+interaction: RightPanel
+actionLocation: ConsoleMenu
+---
+
+分析：
+$all
