@@ -1,7 +1,7 @@
 ---
 name: "SonarFix"
 description: "Here is a description of the action."
-interaction: RunPanel
+interaction: RightPanel
 actionLocation: ExtSonarQubeMenu
 ---
 

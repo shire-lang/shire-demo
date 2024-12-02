@@ -1,5 +1,5 @@
 ---
-name: "SonarFix"
+name: "SonarFix - Intention"
 description: "Here is a description of the action."
 interaction: RunPanel
 actionLocation: IntentionMenu
