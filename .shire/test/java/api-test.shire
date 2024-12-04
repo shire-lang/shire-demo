@@ -1,0 +1,48 @@
+---
+name: "API Test"
+description: "AutoTest"
+interaction: RightPanel
+actionLocation: ContextMenu
+when: $fileName.contains("Controller.java") && $filePath.contains("src/main/java")
+fileName-rules:
+  /.*Controller.java/: "When testing controller, you MUST use MockMvc and test API only."
+---
+
+Write API test for following ${context.language} code, use Intellij IDEA `Http Request` language.
+
+${context.frameworkContext}
+
+#if($context.relatedClasses.length() > 0 )
+Here is the relate code maybe you can use
+${context.relatedClasses}
+#end
+
+#if($context.currentClassName.length() > 0 )
+This is the class where the source code resides:
+${context.currentClassCode}
+#end
+
+${context.extContext}
+
+Here is the imports to help you understand:
+
+${context.imports}
+
+Here is the source code to be tested:
+
+```${context.language}
+${context.selection}
+```
+
+use Intellij IDEA `Http Request` language to generate test. Should Return only on markdown code block, for example:
+
+```http request
+PUT /api/blog/1
+Content-Type: application/json
+
+{
+  "title": "Updated Blog Post",
+  "content": "This is the updated content of my blog post.",
+  "author": "John Doe"
+}
+```
