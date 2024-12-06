@@ -34,10 +34,13 @@ Here is the source code to be tested:
 ${context.selection}
 ```
 
+我的 host 是：localhost:8080
+
+
 use Intellij IDEA `Http Request` language to generate test. Should Return only on markdown code block, for example:
 
 ```http request
-PUT /api/blog/1
+PUT http://localhost:8080/api/blog/1
 Content-Type: application/json
 
 {
