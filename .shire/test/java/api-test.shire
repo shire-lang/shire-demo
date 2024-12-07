@@ -13,8 +13,7 @@ Write API test for following ${context.language} code, use Intellij IDEA `Http R
 ${context.frameworkContext}
 
 #if($context.relatedClasses.length() > 0 )
-Here is the relate code maybe you can use
-${context.relatedClasses}
+Here is the relate code maybe you can use:
 #end
 
 #if($context.currentClassName.length() > 0 )
@@ -30,22 +29,10 @@ ${context.imports}
 
 Here is the source code to be tested:
 
-```${context.language}
+```Java
 ${context.selection}
 ```
 
 我的 host 是：localhost:8080
 
-
-use Intellij IDEA `Http Request` language to generate test. Should Return only on markdown code block, for example:
-
-```http request
-PUT http://localhost:8080/api/blog/1
-Content-Type: application/json
-
-{
-  "title": "Updated Blog Post",
-  "content": "This is the updated content of my blog post.",
-  "author": "John Doe"
-}
-```
+use Intellij IDEA `Http Request` language to generate test.
