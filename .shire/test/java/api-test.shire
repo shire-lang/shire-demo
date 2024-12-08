@@ -21,8 +21,6 @@ This is the class where the source code resides:
 ${context.currentClassCode}
 #end
 
-${context.extContext}
-
 Here is the imports to help you understand:
 
 ${context.imports}
