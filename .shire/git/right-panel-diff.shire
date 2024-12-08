@@ -4,9 +4,9 @@ interaction: RightPanel
 actionLocation: IntentionMenu
 variables:
   "codepath": /BlogController\.java/ { print }
-  "controllerFile": /BlogController\.java/ { print }
+  "controllerCode": /BlogController\.java/ { cat }
   "domainLanguage": /domain-language\.csv/ { cat }
-onStreamingEnd: { parseCode | diff($controllerFile, $output) }
+onStreamingEnd: { parseCode | diff($codepath, $output) }
 ---
 
 你是一个资深的后台开发，请完成如下需求。
