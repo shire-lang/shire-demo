@@ -5,7 +5,7 @@ actionLocation: IntentionMenu
 variables:
   "codepath": /BlogController\.java/ { print }
   "controllerCode": /BlogController\.java/ { cat }
-  "domainLanguage": /domain-language\.csv/ { cat }
+  "serviceCode": /BlogService\.java/ { cat }
 ---
 
 你是一个资深的后台开发，请使用 patch 完成如下需求。
@@ -16,6 +16,12 @@ variables:
 
 $codepath
 
+现有 Controller 代码：
+
 $controllerCode
 
-请使用 patch 的方式完成需求，并使用 markdown 代码格式返回。
+现有 Service 代码：
+
+$serviceCode
+
+请使用 patch 的方式完成需求，并使用 markdown patch 代码格式返回。
