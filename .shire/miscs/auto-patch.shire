@@ -1,13 +1,14 @@
 ---
 name: "自动  patch"
+interaction: RightPanel
 variables:
   "codepath": /BlogController\.java/ { print }
   "controllerCode": /BlogController\.java/ { cat }
+  "serviceCode": /BlogService\.java/ { cat }
   "domainLanguage": /domain-language\.csv/ { cat }
-onStreamingEnd: { parseCode | patch($codepath, $output) }
 ---
 
-你是一个资深的后台开发，请使用 diff patch 的方式完成如下需求。
+你是一个资深的后台开发，请使用 patch 的方式完成如下需求。
 
 需求：删除博客。
 
@@ -15,6 +16,12 @@ onStreamingEnd: { parseCode | patch($codepath, $output) }
 
 $codepath
 
+controllerCode：
+
 $controllerCode
 
-请返回 diff patch，方便我直接使用。
+serviceCode:
+
+$serviceCode
+
+请分成两个 patch 返回，方便我直接使用，使用 markdown 的语言块 patch 来表示。
