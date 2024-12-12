@@ -6,10 +6,9 @@ variables:
   "codepath": /BlogController\.java/ { print }
   "controllerCode": /BlogController\.java/ { cat }
   "domainLanguage": /domain-language\.csv/ { cat }
-onStreamingEnd: { parseCode | diff($codepath, $output) }
 ---
 
-你是一个资深的后台开发，请完成如下需求。
+你是一个资深的后台开发，请使用 patch 完成如下需求。
 
 需求：删除博客。
 
@@ -19,4 +18,4 @@ $codepath
 
 $controllerCode
 
-请返有的代码，方便我对比。
+请使用 patch 的方式完成需求，并使用 markdown 代码格式返回。

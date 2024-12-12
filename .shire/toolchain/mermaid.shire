@@ -1,5 +1,6 @@
 ---
 name: "设计 Mermaid"
+interaction: RightPanel
 variables:
   "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
 onStreamingEnd: { parseCode | saveFile("docs/flow.mermaid") | openFile }
