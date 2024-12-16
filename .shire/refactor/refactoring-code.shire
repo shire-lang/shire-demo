@@ -29,5 +29,5 @@ $codeSmell
 重构以下代码：
 
 ```$language
-$selection
+$selectionWithNum
 ```
