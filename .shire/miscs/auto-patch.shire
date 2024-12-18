@@ -1,6 +1,7 @@
 ---
 name: "自动  patch"
 interaction: RightPanel
+onStreaming: { logging }
 variables:
   "codepath": /BlogController\.java/ { print }
   "controllerCode": /BlogController\.java/ { cat }

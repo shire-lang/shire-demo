@@ -2,6 +2,7 @@
 name: "Refactoring"
 actionLocation: ContextMenu
 interaction: ReplaceSelection
+onStreaming: { logging }
 ---
 
 请你这段代码建议适当的重构。提高代码的可读性、质量，使代码更加有组织和易懂。你的回答应包含重构描述和一个代码片段，展示重构后的结果。

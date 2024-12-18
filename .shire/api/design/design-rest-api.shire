@@ -1,5 +1,6 @@
 ---
 name: "Design RESTful API"
+onStreaming: { timing }
 variables:
   "feature": "Share Video"
   "story": /any/ { thread(".shire/shell/dify-epic-story.curl.sh") | jsonpath("$.answer", true) }
