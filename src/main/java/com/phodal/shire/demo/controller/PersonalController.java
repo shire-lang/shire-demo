@@ -23,7 +23,7 @@ public class PersonalController {
         return new ResponseEntity<>(createdPersonal, HttpStatus.CREATED);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public ResponseEntity<List<Personal>> getAllPersonals() {
         List<Personal> personals = personalService.getAllPersonals();
         return new ResponseEntity<>(personals, HttpStatus.OK);
