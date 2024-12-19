@@ -11,16 +11,13 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/personal")
+@RequestMapping("/personal")
 public class PersonalController {
 
-    private final PersonalService personalService;
+    @Autowired
+    private PersonalService personalService;
 
-    public PersonalController(PersonalService personalService) {
-        this.personalService = personalService;
-    }
-
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Personal> createPersonal(@Validated @RequestBody Personal personal) {
         Personal createdPersonal = personalService.createPersonal(personal);
         return new ResponseEntity<>(createdPersonal, HttpStatus.CREATED);
@@ -30,13 +27,6 @@ public class PersonalController {
     public ResponseEntity<List<Personal>> getAllPersonals() {
         List<Personal> personals = personalService.getAllPersonals();
         return new ResponseEntity<>(personals, HttpStatus.OK);
-    }
-
-    // Get a specific Personal record by ID
-    public ResponseEntity<Personal> getPersonalById(@PathVariable Long id) {
-        Personal personal = personalService.getPersonalById(id);
-        return personal != null ? new ResponseEntity<>(personal, HttpStatus.OK)
-                : new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 
     @PutMapping("/{id}")
