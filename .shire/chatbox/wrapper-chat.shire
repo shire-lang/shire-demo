@@ -1,0 +1,11 @@
+---
+name: "shire-temp"
+description: "Shire Temp File"
+interaction: RightPanel
+actionLocation: ChatBox
+---
+
+根据用户的输入生成 Java 代码
+
+$chatPrompt
+
