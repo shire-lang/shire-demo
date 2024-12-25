@@ -10,9 +10,6 @@ import org.springframework.web.bind.annotation.*;
 /**
  * Hello
  *
- * ```shire
- * hi
- * ```
  */
 @RestController
 @RequestMapping("/blog")
