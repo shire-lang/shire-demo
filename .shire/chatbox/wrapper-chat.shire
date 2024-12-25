@@ -1,11 +1,15 @@
 ---
-name: "shire-temp"
-description: "Shire Temp File"
+name: "shire multiple file edit"
+description: "Shire Multiple File Edit"
+onStreaming: { logging }
 interaction: RightPanel
 actionLocation: ChatBox
 ---
 
-根据用户的输入生成 Java 代码
+根据用户的要求输入生成 Java 代码。要求：
+
+1. 使用 diff patch 的方式。
+2. 如果是新文件也使用 patch 的格式。
 
 $chatPrompt
 
