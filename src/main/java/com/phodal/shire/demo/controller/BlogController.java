@@ -1,6 +1,7 @@
 package com.phodal.shire.demo.controller;
 
 import com.phodal.shire.demo.dto.CreateBlogRequest;
+import com.phodal.shire.demo.dto.DeleteBlogResponse;
 import com.phodal.shire.demo.dto.CreateBlogResponse;
 import com.phodal.shire.demo.entity.BlogPost;
 import com.phodal.shire.demo.service.BlogService;
@@ -45,5 +46,16 @@ public class BlogController {
         BlogPost createdBlog = blogService.createBlog(blogPost);
         BeanUtils.copyProperties(createdBlog, response);
         return createdBlog;
+    }
+
+    /**
+     * Delete a blog post by id.
+     *
+     * @param id The id of the blog post to delete
+     * @return A response indicating the blog post was deleted
+     */
+    @DeleteMapping("/{id}")
+    public DeleteBlogResponse deleteBlog(@PathVariable Long id) {
+        return blogService.deleteBlog(id);
     }
 }

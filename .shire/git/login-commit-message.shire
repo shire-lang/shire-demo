@@ -3,8 +3,6 @@ name: "带 ID 的 Commit message"
 description: "生成提交信息"
 interaction: AppendCursor
 actionLocation: CommitMenu
-variables:
-  "story": /any/ { thread(".shire/shell/fetch-jira.sh") | jsonpath("$.data.Story") }
 ---
 
 为给定的变更（Diff）编写一个连贯但具有描述性的代码提交信息。
