@@ -1,4 +1,4 @@
-/database:execute
+/database:query
 ```sql
 select * from chunks
 ```
