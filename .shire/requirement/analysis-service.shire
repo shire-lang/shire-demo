@@ -1,7 +1,7 @@
 ---
 name: "分析需求，选择合适的代码文件"
 variables:
-  "firstService": /CinemaService\.java/ { print }
+  "firstService": /BlogService\.java/ { print }
   "domainLanguage": /domain-language\.csv/ { cat }
   "controllerCode": /any/ { cat($output) }
 afterStreaming: {
