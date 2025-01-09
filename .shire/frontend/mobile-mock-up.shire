@@ -20,17 +20,22 @@ padding, margin, border, etc. Match the colors and sizes exactly.
 In terms of libraries,
 
 - Use these script to include Ionic so that it can run on a standalone page:
+```html
     <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+```
+
 - Use this script to include Tailwind: <script src="https://cdn.tailwindcss.com"></script>
 - You can use Google Fonts
 - ionicons for icons, add the following <script > tags near the end of the page, right before the closing </body> tag:
+```html
     <script type="module">
         import ionicons from 'https://cdn.jsdelivr.net/npm/ionicons/+esm'
     </script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/esm/ionicons.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/ionicons/dist/collection/components/icon/icon.min.css" rel="stylesheet">
+```
 
 Return only the full code in <html></html> tags.
 Do not include markdown "\`\`\`" or "\`\`\`html" at the start or end.
