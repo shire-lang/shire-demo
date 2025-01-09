@@ -1,5 +1,5 @@
 ---
-name: "footer"
+name: "Generate React Mockup"
 onStreamingEnd: { parseCode | showWebView }
 ---
 
@@ -25,15 +25,19 @@ padding, margin, border, etc. Match the colors and sizes exactly.
 In terms of libraries,
 
 - Use these script to include React so that it can run on a standalone page:
+```html
   <script src="https://registry.npmmirror.com/react/18.2.0/files/umd/react.development.js"></script>
   <script src="https://registry.npmmirror.com/react-dom/18.2.0/files/umd/react-dom.development.js"></script>
   <script src="https://registry.npmmirror.com/@babel/standalone/7.23.6/files/babel.js"></script>
+```
 
 - Use these script to include Ant Design:
+```html
   <script src="https://registry.npmmirror.com/dayjs/1.11.10/files/dayjs.min.js"></script>
   <script src="https://registry.npmmirror.com/antd/5.12.2/files/dist/antd.js"></script>
   <script src="  https://registry.npmmirror.com/@ant-design/icons/5.2.6/files/dist/index.umd.js"></script>
   <script src="https://registry.npmmirror.com/@ant-design/pro-components/2.6.43/files/dist/pro-components.min.js"></script>
+```
 
 Return only the full code in <html></html> tags.
 Do not include markdown "\`\`\`" or "\`\`\`html" at the start or end.
@@ -51,7 +55,7 @@ update it to look more like the reference image(The first image).
 padding, margin, border, etc. Match the colors and sizes exactly.
 - Make sure the generated HTML elements are placed on the Vue template an Make sure the do not add any html elements to the div id="app" under the body.
 - Use Vue using the global build like so:
-
+```html
 <div id="app">{{ message }}</div>
 <script>
   const { createApp, ref } = Vue
@@ -64,6 +68,7 @@ padding, margin, border, etc. Match the colors and sizes exactly.
     }
   }).mount('#app')
 </script>
+```
 
 - Use the exact text from the screenshot.
 - Strict output code does not require markdown format.
