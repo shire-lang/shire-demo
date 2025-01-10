@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank App</title>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+<ion-app>
+    <ion-content>
+        <div class="fixed bottom-0 left-0 right-0 bg-white shadow-lg">
+            <div class="flex justify-around items-center py-3">
+                <div class="flex flex-col items-center">
+                    <ion-icon name="home-outline" class="text-gray-500 text-2xl"></ion-icon>
+                    <span class="text-xs text-gray-500 mt-1">Home</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <ion-icon name="wallet-outline" class="text-gray-500 text-2xl"></ion-icon>
+                    <span class="text-xs text-gray-500 mt-1">Accounts</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <ion-icon name="card-outline" class="text-gray-500 text-2xl"></ion-icon>
+                    <span class="text-xs text-gray-500 mt-1">Cards</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <ion-icon name="notifications-outline" class="text-gray-500 text-2xl"></ion-icon>
+                    <span class="text-xs text-gray-500 mt-1">Notifications</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <ion-icon name="person-outline" class="text-gray-500 text-2xl"></ion-icon>
+                    <span class="text-xs text-gray-500 mt-1">Profile</span>
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-app>
+<script type="module">
+    import ionicons from 'https://cdn.jsdelivr.net/npm/ionicons/+esm'
+</script>
+<script nomodule src="https://cdn.jsdelivr.net/npm/ionicons/dist/esm/ionicons.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/ionicons/dist/collection/components/icon/icon.min.css" rel="stylesheet">
+</body>
+</html>

@@ -1,6 +1,7 @@
 ---
 name: "shire multiple file edit"
 description: "Shire Multiple File Edit"
+onStreaming: { logging }
 interaction: StreamDiff
 actionLocation: InlineChat
 ---
@@ -10,6 +11,8 @@ actionLocation: InlineChat
 1. 使用 diff patch 的方式。
 2. 如果是新文件也使用 patch 的格式。
 3. 每个文件的修改也请用 diff 的形式给出。
+
+$frameworkContext
 
 现有代码如下：
 
