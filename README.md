@@ -71,4 +71,4 @@ Mermaid See in: `.shire/toolchain/mermaid.shire`
 
 ## LICENSE
 
-This code is distributed under the MPL 2.0 license. See `LICENSE` in this directory.
+This code is distributed under the WTFPL license. See `LICENSE` in this directory.
